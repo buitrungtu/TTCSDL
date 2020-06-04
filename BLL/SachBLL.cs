@@ -42,5 +42,13 @@ namespace BLL
         {
             return SAC.SuaThongTinSach(temp);
         }
+        public bool SuaDauSach(DauSach temp)
+        {
+            return SAC.SuaDauSach(temp);
+        }
+        public List<ThongTinSach> TimKiemSach(string thongtin)
+        {
+            return SAC.TimKiemSach(thongtin);
+        }
     }
 }

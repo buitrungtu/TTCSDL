@@ -15,6 +15,8 @@ namespace QuanLyThuVien.Form_Sach
     public partial class SuaDauSach : Form
     {
         public string MaDauSach;
+        public bool SuaThanhCong;
+        SachBLL SBLL = new SachBLL();
         public SuaDauSach()
         {
             InitializeComponent();
@@ -31,8 +33,7 @@ namespace QuanLyThuVien.Form_Sach
         }
 
         private void SuaDauSach_Load(object sender, EventArgs e)
-        {
-            SachBLL SBLL = new SachBLL();
+        {          
             DauSach temp = SBLL.LayThongTinDauSach(MaDauSach);
             lbMaDauSach.Text = temp.MaDauSach;
             txbTenDauSach.Text = temp.TenDauSach;
@@ -40,6 +41,28 @@ namespace QuanLyThuVien.Form_Sach
             txbTheLoai.Text = temp.TheLoai;
             txbNgonNgu.Text = temp.NgonNgu;
             txbNhaXuatBan.Text = temp.NhaXuatBan;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DauSach temp = new DauSach();
+            temp.MaDauSach = MaDauSach;
+            temp.TacGia = txbTacGia.Text;
+            temp.NhaXuatBan = txbNhaXuatBan.Text;
+            temp.NgonNgu = txbNgonNgu.Text;
+            temp.TheLoai = txbTheLoai.Text;
+            temp.TenDauSach = txbTenDauSach.Text;
+
+            if (SBLL.SuaDauSach(temp))
+            {
+                MessageBox.Show("Sửa thông tin đầu sách thành công");
+                SuaThanhCong = true;
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Sửa thông tin đầu sách thất bại");
+            }
         }
     }
 }

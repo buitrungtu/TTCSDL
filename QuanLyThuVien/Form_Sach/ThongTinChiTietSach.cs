@@ -38,7 +38,11 @@ namespace QuanLyThuVien.Form_Sach
         {
             SuaDauSach temp = new SuaDauSach();
             temp.MaDauSach = MaDauSach;
-            temp.Show();           
+            temp.ShowDialog();
+            if(temp.SuaThanhCong == true)
+            {
+                LoadThongTin();
+            }
         }
         void LoadThongTin()
         {

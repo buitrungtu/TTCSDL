@@ -14,7 +14,7 @@ namespace QuanLyThuVien.Form_Sach
 {
     public partial class ThemDauSach : Form
     {
-        public static bool ThemThanhCong = false;
+        public bool ThemThanhCong = false;
         SachBLL SBLL = new SachBLL();
         public ThemDauSach()
         {
@@ -50,6 +50,11 @@ namespace QuanLyThuVien.Form_Sach
             {
                 MessageBox.Show("Thêm đầu sách thất bại");
             }
+        }
+
+        private void ThemDauSach_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -238,18 +238,18 @@
             // xóaToolStripMenuItem1
             // 
             this.xóaToolStripMenuItem1.Name = "xóaToolStripMenuItem1";
-            this.xóaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.xóaToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
             this.xóaToolStripMenuItem1.Text = "Xóa";
             // 
             // xóaToolStripMenuItem
             // 
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(177, 6);
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(161, 6);
             // 
             // thôngTinChiTiếtToolStripMenuItem
             // 
             this.thôngTinChiTiếtToolStripMenuItem.Name = "thôngTinChiTiếtToolStripMenuItem";
-            this.thôngTinChiTiếtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thôngTinChiTiếtToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.thôngTinChiTiếtToolStripMenuItem.Text = "Thông tin chi tiết";
             this.thôngTinChiTiếtToolStripMenuItem.Click += new System.EventHandler(this.thôngTinChiTiếtToolStripMenuItem_Click);
             // 
@@ -260,7 +260,7 @@
             this.xóaToolStripMenuItem,
             this.xóaToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 54);
             // 
             // flowLayoutPanel2
             // 
@@ -337,6 +337,7 @@
             this.txbTimKiem.Name = "txbTimKiem";
             this.txbTimKiem.Size = new System.Drawing.Size(260, 31);
             this.txbTimKiem.TabIndex = 3;
+            this.txbTimKiem.TextChanged += new System.EventHandler(this.txbTimKiem_TextChanged);
             // 
             // panel3
             // 

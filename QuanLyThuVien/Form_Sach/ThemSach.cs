@@ -35,27 +35,25 @@ namespace QuanLyThuVien.Form_Sach
 
         private void btnThemDauSach_Click(object sender, EventArgs e)
         {
-            
-            using (ThemDauSach themdausach = new ThemDauSach())
+            ThemDauSach themdausach = new ThemDauSach();
+            themdausach.Show();
+            if (themdausach.ThemThanhCong == true)
             {
-                themdausach.ShowDialog();
-                if(ThemDauSach.ThemThanhCong == true)
+                // Gợi ý dữ liệu cho Đầu sách
+                cbDauSach.AutoCompleteCustomSource.Clear();
+                AutoCompleteStringCollection autotext = new AutoCompleteStringCollection();
+                List<DauSach> LDS = SBLL.LayDauSach();
+                foreach (DauSach a in LDS)
                 {
-                    // Gợi ý dữ liệu cho Đầu sách
-                    cbDauSach.AutoCompleteCustomSource.Clear();
-                    AutoCompleteStringCollection autotext = new AutoCompleteStringCollection();
-                    List<DauSach> LDS = SBLL.LayDauSach();
-                    foreach (DauSach a in LDS)
-                    {
-                        string temp = a.TenDauSach + " - " + a.MaDauSach;
-                        temp = temp.Trim();
-                        autotext.Add(temp);
-                    }
-                    cbDauSach.AutoCompleteMode = AutoCompleteMode.Suggest;
-                    cbDauSach.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                    cbDauSach.AutoCompleteCustomSource = autotext;
+                    string temp = a.TenDauSach + " - " + a.MaDauSach;
+                    temp = temp.Trim();
+                    autotext.Add(temp);
                 }
+                cbDauSach.AutoCompleteMode = AutoCompleteMode.Suggest;
+                cbDauSach.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                cbDauSach.AutoCompleteCustomSource = autotext;
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

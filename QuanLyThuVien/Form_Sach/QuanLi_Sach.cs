@@ -14,6 +14,7 @@ namespace QuanLyThuVien.Form_Sach
 {
     public partial class QuanLi_Sach : UserControl
     {
+        SachBLL SBLL = new SachBLL();
         public QuanLi_Sach()
         {
             InitializeComponent();
@@ -32,8 +33,7 @@ namespace QuanLyThuVien.Form_Sach
             }
         }
         void HienThiSach()
-        {                    
-            SachBLL SBLL = new SachBLL();
+        {                                
             List<Sach> LS = new List<Sach>();
             LS = SBLL.LayToanBoSach();                        
             lvSach.Items.Clear();
@@ -87,6 +87,28 @@ namespace QuanLyThuVien.Form_Sach
                 
             }
             
+        }
+
+        private void txbTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            lvSach.Items.Clear();
+            List<ThongTinSach> tts = SBLL.TimKiemSach(txbTimKiem.Text);
+            foreach (ThongTinSach s in tts)
+            {
+                ListViewItem lvi = new ListViewItem(s.MaSach + "");
+                lvi.SubItems.Add(s.TenDauSach);
+                if (s.Tap == 0) lvi.SubItems.Add("Chưa có thông tin");
+                else lvi.SubItems.Add(s.Tap + "");
+                if (s.LanTaiBan == 0) lvi.SubItems.Add("Chưa có thông tin");
+                else lvi.SubItems.Add(s.LanTaiBan + "");
+                lvi.SubItems.Add("Chưa có thông tin");
+                lvi.SubItems.Add(s.TenTacGia);
+                lvi.SubItems.Add(s.TheLoai);
+                lvi.SubItems.Add(s.NgonNgu);
+                lvi.SubItems.Add(s.NhaXuatBan);
+                lvSach.Items.Add(lvi);
+                lvi.Tag = s;
+            }
         }
     }
 }

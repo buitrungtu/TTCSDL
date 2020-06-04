@@ -400,5 +400,119 @@ namespace DAL
             int kq = command.ExecuteNonQuery();
             return kq > 0;
         }
+        public bool SuaDauSach(DauSach x)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "SuaDauSach";
+            command.Connection = conn;
+
+            command.Parameters.Add("@madausach", SqlDbType.NChar).Value = x.MaDauSach;
+            command.Parameters.Add("@tendausach", SqlDbType.NChar).Value = x.TenDauSach;
+            command.Parameters.Add("@tacgia", SqlDbType.NChar).Value = x.TacGia;
+            command.Parameters.Add("@theloai", SqlDbType.NChar).Value = x.TheLoai;
+            command.Parameters.Add("@NXB", SqlDbType.NChar).Value = x.NhaXuatBan;
+            command.Parameters.Add("@ngonngu", SqlDbType.NChar).Value = x.NgonNgu;
+
+            int kq = command.ExecuteNonQuery();
+            return kq > 0;
+        }
+        public List<ThongTinSach> TimKiemSach(string thongtin)
+        {
+            List<ThongTinSach> ltk = new List<ThongTinSach>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from dbo.TimKiemSach(@thongtin)";
+            command.Connection = conn;
+            command.Parameters.Add("@thongtin", SqlDbType.NVarChar).Value = thongtin;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                ThongTinSach kq = new ThongTinSach();
+                kq.MaSach = reader.GetString(0);
+                if (!reader.IsDBNull(1))
+                {
+                    kq.TenDauSach = reader.GetString(1);
+                }
+                else
+                {
+                    kq.TenDauSach = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(2))
+                {
+                    kq.Tap = reader.GetInt32(2);
+                }
+                else
+                {
+                    kq.Tap = 0;
+                }
+                if (!reader.IsDBNull(3))
+                {
+                    kq.LanTaiBan = reader.GetInt32(3);
+                }
+                else
+                {
+                    kq.LanTaiBan = 0;
+                }
+                if (!reader.IsDBNull(4))
+                {
+                    kq.SoTrang = reader.GetInt32(4);
+                }
+                else
+                {
+                    kq.SoTrang = 0;
+                }
+                if (!reader.IsDBNull(5))
+                {
+                    kq.TinhTrang = reader.GetString(5);
+                }
+                else
+                {
+                    kq.TinhTrang = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(6))
+                {
+                    kq.NamXuatBan = reader.GetDateTime(6);
+                }
+                if (!reader.IsDBNull(7))
+                {
+                    kq.TenTacGia = reader.GetString(7);
+                }
+                else
+                {
+                    kq.TenTacGia = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(8))
+                {
+                    kq.NhaXuatBan = reader.GetString(8);
+                }
+                else
+                {
+                    kq.NhaXuatBan = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(9))
+                {
+                    kq.TheLoai = reader.GetString(9);
+                }
+                else
+                {
+                    kq.TheLoai = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(10))
+                {
+                    kq.NgonNgu = reader.GetString(10);
+                }
+                else
+                {
+                    kq.NgonNgu = "Chưa có thông tin";
+                }
+                ltk.Add(kq);
+            }
+            reader.Close();
+            return ltk;
+        }
+        
     }
 }

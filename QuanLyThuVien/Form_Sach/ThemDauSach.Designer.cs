@@ -271,6 +271,7 @@
             this.Name = "ThemDauSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemDauSach";
+            this.Load += new System.EventHandler(this.ThemDauSach_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
