@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO
+namespace DTO.Sach
 {
-    public class Sach
+    public class GiaSach
     {
-
+        public int MaGiaSach { get; set; }
+        public string TenGiaSach { get; set; }
     }
 }

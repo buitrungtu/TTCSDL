@@ -15,3 +15,10 @@ D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI.csproj.CopyComplete
 D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+D:\QuanLyThuVien\QuanLyThuVien\bin\Debug\DAL.dll
+D:\QuanLyThuVien\QuanLyThuVien\bin\Debug\DAL.pdb
+D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Sach.ThemSach.resources
+D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Sach.ThemDauSach.resources
+D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Sach.ThongKe.resources
+D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Sach.ThongTinChiTietSach.resources
+D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Sach.SuaDauSach.resources

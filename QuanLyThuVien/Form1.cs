@@ -47,10 +47,7 @@ namespace QuanLyThuVien
         }
 
 
-        private void btnThoat_Click_1(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
+        
 
         private void btnMenu_Click_1(object sender, EventArgs e)
         {
