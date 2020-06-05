@@ -15,10 +15,10 @@ namespace QuanLyThuVien.Form_Sach
 {
     public partial class ThongTinChiTietSach : Form
     {
-        string HinhAnh = "";
         SachBLL SBLL = new SachBLL();
         public string MaSach;
         string MaDauSach;
+        string tenduoianh;
         public ThongTinChiTietSach()
         {
             InitializeComponent();
@@ -65,10 +65,9 @@ namespace QuanLyThuVien.Form_Sach
             txbNamXB.Text = temp.NamXuatBan.ToString("dd/MM/yyyy");
             txbTinhTrang.Text = temp.TinhTrang;
             cbGia.Text = temp.MaGiaSach.ToString() + " - " + temp.TenGiaSach;
-            HinhAnh = temp.HinhAnh;
             if (temp.HinhAnh != "")
             {
-                pictureBox1.Image = new Bitmap(ByteToImg(temp.HinhAnh));
+                pictureBox1.Image = new Bitmap(Application.StartupPath + "\\HinhAnh\\"+temp.HinhAnh);
             }
             // Gợi ý dữ liệu cho giá sách
             List<GiaSach> LGS = SBLL.LayGiaSach();
@@ -85,41 +84,17 @@ namespace QuanLyThuVien.Form_Sach
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
                 OpenFileDialog openFile = new OpenFileDialog();
                 openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-                openFile.FilterIndex = 1;
                 openFile.RestoreDirectory = true;
                 if (openFile.ShowDialog() == DialogResult.OK)
                 {
                     txbLink.Text = openFile.FileName;
-                }
-                HinhAnh = Convert.ToBase64String(converImgToByte());
-                pictureBox1.Image = new Bitmap(ByteToImg(HinhAnh));
-            }
-            catch
-            {
-
-            }
+                    pictureBox1.Image = new Bitmap(openFile.FileName);
+                    tenduoianh = Path.GetExtension(openFile.FileName);
+                }                          
         }
-        private byte[] converImgToByte()
-        {
-            FileStream fs;
-            fs = new FileStream(txbLink.Text, FileMode.Open, FileAccess.Read);
-            byte[] picbyte = new byte[fs.Length];
-            fs.Read(picbyte, 0, System.Convert.ToInt32(fs.Length));
-            fs.Close();
-            return picbyte;
-        }
-        private Image ByteToImg(string byteString)
-        {
-            byte[] imgBytes = Convert.FromBase64String(byteString); // chuyển string thành mảng byte
-            MemoryStream ms = new MemoryStream(imgBytes, 0, imgBytes.Length);
-            ms.Write(imgBytes, 0, imgBytes.Length);
-            Image image = Image.FromStream(ms, true);
-            return image;
-        }
+                
         string ChuyenDoiNgayThang(string s)
         {
             try
@@ -151,7 +126,14 @@ namespace QuanLyThuVien.Form_Sach
                     temp.MaGiaSach = Int32.Parse(giasach[0]);
                     temp.Tang = Int32.Parse(nbTang.Value.ToString());
                     temp.Ngan = Int32.Parse(nbNgan.Value.ToString());
-                    temp.HinhAnh = HinhAnh;
+                    string tenanh = "";
+                    if(pictureBox1.Image != null)
+                    {
+                        tenanh = temp.MaSach + tenduoianh;
+                        File.Copy(txbLink.Text, Path.Combine(Application.StartupPath + "\\HinhAnh\\",tenanh),true);
+                    }
+                    temp.HinhAnh = tenanh;
+
                     if (SBLL.SuaThongTinSach(temp))
                     {
                         MessageBox.Show("Sửa thông tin thành công");

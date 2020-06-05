@@ -16,7 +16,7 @@ namespace QuanLyThuVien.Form_Sach
     public partial class ThemSach : Form
     {
         SachBLL SBLL = new SachBLL();
-        public string strHinhAnh = "";
+        public string tenduoianh;
         public ThemSach()
         {
             InitializeComponent();
@@ -58,22 +58,14 @@ namespace QuanLyThuVien.Form_Sach
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            openFile.RestoreDirectory = true;
+            if (openFile.ShowDialog() == DialogResult.OK)
             {
-                OpenFileDialog openFile = new OpenFileDialog();
-                openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-                openFile.FilterIndex = 1;
-                openFile.RestoreDirectory = true;
-                if (openFile.ShowDialog() == DialogResult.OK)
-                {
-                    txbLink.Text = openFile.FileName;
-                }
-                strHinhAnh = Convert.ToBase64String(converImgToByte());
-                pictureBox1.Image = new Bitmap(ByteToImg(strHinhAnh));
-            }
-            catch
-            {
-
+                txbLink.Text = openFile.FileName;
+                pictureBox1.Image = new Bitmap(openFile.FileName);
+                tenduoianh = Path.GetExtension(openFile.FileName);
             }
         }
         private byte[] converImgToByte()
@@ -168,7 +160,13 @@ namespace QuanLyThuVien.Form_Sach
                             temp.GiaSach = Int32.Parse(giasach[0]);
                             temp.Tang = Int32.Parse(nbTang.Value.ToString());
                             temp.Ngan = Int32.Parse(nbNgan.Value.ToString());
-                            temp.HinhAnh = strHinhAnh;
+                            string tenanh = "";
+                            if (pictureBox1.Image != null)
+                            {
+                                tenanh = temp.MaSach + tenduoianh;
+                                File.Copy(txbLink.Text, Path.Combine(Application.StartupPath + "\\HinhAnh\\", tenanh), true);
+                            }
+                            temp.HinhAnh = tenanh;
                             if (SBLL.ThemSach(temp))
                             {
                                 MessageBox.Show("Thêm sách thành công.");

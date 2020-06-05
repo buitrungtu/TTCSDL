@@ -157,5 +157,8 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="HinhAnh\unnamed.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
