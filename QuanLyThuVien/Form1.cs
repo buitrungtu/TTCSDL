@@ -1,4 +1,5 @@
-﻿using QuanLyThuVien.Form_MuonTra;
+﻿using QuanLyThuVien.Form_DocGia;
+using QuanLyThuVien.Form_MuonTra;
 using QuanLyThuVien.Form_Sach;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,10 @@ namespace QuanLyThuVien
     {
         int PanelWith;
         bool ThuNhoMenu;
+        //Khoi tao để dungchung tranh new nhieu lan 
+        private QuanLi_Sach quanLiSach;
+        private QuanLi_MuonTra quanLiMuonTra;
+        private QuanLyDocGia quanLyDocGia;
         public Form1()
         {
             InitializeComponent();
@@ -23,8 +28,10 @@ namespace QuanLyThuVien
             ThuNhoMenu = false;
             PanelWith = panelLeft.Width;
             ThuNhoMenu = false;
-            QuanLi_Sach temp = new QuanLi_Sach();
-            AddControlsToPanel(temp);
+            quanLiSach = new QuanLi_Sach();
+            quanLiMuonTra = new QuanLi_MuonTra();
+            quanLyDocGia = new QuanLyDocGia();
+            AddControlsToPanel(quanLiSach);
         }
 
         private void moveSidePanel(Control btn)
@@ -42,8 +49,7 @@ namespace QuanLyThuVien
         private void btnSach_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnSach);
-            QuanLi_Sach temp = new QuanLi_Sach();
-            AddControlsToPanel(temp);
+            AddControlsToPanel(quanLiSach);
         }
 
 
@@ -57,8 +63,8 @@ namespace QuanLyThuVien
         private void btnMuonTra_Click_1(object sender, EventArgs e)
         {
             moveSidePanel(btnMuonTra);
-            QuanLi_MuonTra temp = new QuanLi_MuonTra();
-            AddControlsToPanel(temp);
+            
+            AddControlsToPanel(quanLiMuonTra);
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
@@ -88,6 +94,7 @@ namespace QuanLyThuVien
         private void btnDocGia_Click_1(object sender, EventArgs e)
         {
             moveSidePanel(btnDocGia);
+            AddControlsToPanel(quanLyDocGia);
         }
 
         private void btnNhanVien_Click_1(object sender, EventArgs e)
