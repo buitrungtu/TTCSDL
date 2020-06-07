@@ -11,7 +11,7 @@ namespace DAL
     public class DatabaseAccess
     {
         // nhớ đổi chuỗi kết nối
-        string strConn = "Data Source=DESKTOP-UE7MK69;Database=QuanLyThuVien;Integrated Security=True";
+        string strConn = "Data Source=DESKTOP-RQNIR93;Database=QuanLyThuVien;Integrated Security=True";
         protected SqlConnection conn = null;
         public void OpenConnection()
         {
