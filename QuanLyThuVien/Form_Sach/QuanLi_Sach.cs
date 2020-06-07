@@ -54,10 +54,27 @@ namespace QuanLyThuVien.Form_Sach
                 lvi.Tag = s;
             }
         }
-
+        void HienThiGiaoDienDauSach()
+        {
+            List<DauSach> LS = new List<DauSach>();
+            LS = SBLL.HienThiGiaoDienDauSach();
+            lvDauSach.Items.Clear();
+            foreach (DauSach s in LS)
+            {
+                ListViewItem lvi = new ListViewItem(s.MaDauSach);
+                lvi.SubItems.Add(s.TenDauSach);                            
+                lvi.SubItems.Add(s.TacGia);
+                lvi.SubItems.Add(s.TheLoai);
+                lvi.SubItems.Add(s.NhaXuatBan);
+                lvi.SubItems.Add(s.NgonNgu);
+                lvDauSach.Items.Add(lvi);
+                lvi.Tag = s;
+            }
+        }
         private void QuanLi_Sach_Load(object sender, EventArgs e)
         {
             HienThiSach();
+            HienThiGiaoDienDauSach();
         }
 
         private void btnThemSach_Click(object sender, EventArgs e)
@@ -83,8 +100,7 @@ namespace QuanLyThuVien.Form_Sach
                 Sach s = lvi.Tag as Sach;
                 ThongTinChiTietSach temp = new ThongTinChiTietSach();
                 temp.MaSach = s.MaSach;
-                temp.Show();
-                
+                temp.Show();                
             }
             else
             {
@@ -170,6 +186,53 @@ namespace QuanLyThuVien.Form_Sach
                 MessageBox.Show("Bạn phải chọn 1 cuốn sách");
             }
             
+        }
+
+        private void xemChiTiếtToolStripMenuItem_Click(object sender, EventArgs e)
+        {           
+            if (lvDauSach.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = lvDauSach.SelectedItems[0];
+                DauSach s = lvi.Tag as DauSach;
+                SuaDauSach temp = new SuaDauSach();
+                temp.MaDauSach = s.MaDauSach;
+                temp.ShowDialog();
+                if (temp.SuaThanhCong)
+                {
+                    HienThiGiaoDienDauSach();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 cuốn sách");
+            }
+
+        }
+
+        private void xóaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (lvDauSach.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = lvDauSach.SelectedItems[0];
+                DauSach s = lvi.Tag as DauSach;
+                DialogResult result = MessageBox.Show("Khi bạn xóa đầu sách này thì toàn bộ cuốn sách thuộc đầu sách này sẽ bị xóa. \n Bạn có chắc là muốn xóa đầu sách này?", "Xác nhận lần nữa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (SBLL.XoaDauSach(s.MaDauSach))
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        HienThiSach();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 cuốn sách");
+            }
         }
     }
 }

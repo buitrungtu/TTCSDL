@@ -34,25 +34,42 @@ namespace QuanLyThuVien.Form_MuonTra
         {
             this.Dispose();
         }
+        string ChuyenDoiNgayThang(string s)
+        {
+            try
+            {
+                string[] temp = s.Split('/');
+                return temp[1] + '/' + temp[0] + '/' + temp[2];
+            }
+            catch
+            {
+                return "";
+            }
 
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             MuonSach temp = new MuonSach();
             temp.MaSach = txbMaSach.Text;
             temp.MaDG = txbMaNguoiMuon.Text;
             temp.MaNV = Int32.Parse(lbMaNV.Text);
-            DateTime a = new DateTime();
-            if(DateTime.TryParse(txbNgayTra.Text,out a)){
-                temp.NgayTra = a;
-            }
-            if (MTBLL.ChoMuonSach(temp))
+            DateTime ngaytra = new DateTime();
+            if (DateTime.TryParse(ChuyenDoiNgayThang(txbNgayTra.Text), out ngaytra))
             {
-                MessageBox.Show("Mượn sách thành công!");
-                this.Dispose();
+                temp.NgayTra = ngaytra;
+                if (MTBLL.ChoMuonSach(temp))
+                {
+                    MessageBox.Show("Mượn sách thành công!");
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Mượn sách thất bại");
+                }
             }
             else
             {
-                MessageBox.Show("Mượn sách thất bại");
+                MessageBox.Show("Ngày trả không hợp lệ");
             }
         }
     }

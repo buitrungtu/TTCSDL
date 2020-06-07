@@ -62,7 +62,7 @@ namespace DAL
                 }
                 else
                 {
-                    temp.TheLoai = "Chưa có thông tin";
+                    temp.TacGia = "Chưa có thông tin";
                 }
                 if (!reader.IsDBNull(6))
                 {
@@ -70,7 +70,7 @@ namespace DAL
                 }
                 else
                 {
-                    temp.TacGia = "Chưa có thông tin";
+                    temp.TheLoai = "Chưa có thông tin";
                 }
                 if (!reader.IsDBNull(7))
                 {
@@ -614,6 +614,77 @@ namespace DAL
           
             command.Parameters.Add("@masach", SqlDbType.NChar).Value = MaSach;
            
+            int kq = command.ExecuteNonQuery();
+            return kq > 0;
+        }
+        public List<DauSach> HienThiGiaoDienDauSach()
+        {
+            List<DauSach> LS = new List<DauSach>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from HienThiGiaoDienDauSach";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                DauSach temp = new DauSach();
+                temp.MaDauSach = reader.GetString(0);
+                if (!reader.IsDBNull(1))
+                {
+                    temp.TenDauSach = reader.GetString(1);
+                }
+                else
+                {
+                    temp.TenDauSach = "Chưa có thông tin";
+                }                                
+                if (!reader.IsDBNull(2))
+                {
+                    temp.TacGia = reader.GetString(2);
+                }
+                else
+                {
+                    temp.TacGia = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(3))
+                {
+                    temp.TheLoai = reader.GetString(3);
+                }
+                else
+                {
+                    temp.TheLoai = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(4))
+                {
+                    temp.NgonNgu = reader.GetString(4);
+                }
+                else
+                {
+                    temp.NgonNgu = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(5))
+                {
+                    temp.NhaXuatBan = reader.GetString(5);
+                }
+                else
+                {
+                    temp.NhaXuatBan = "Chưa có thông tin";
+                }
+                LS.Add(temp);
+            }
+            reader.Close();
+            return LS;
+        }
+        public bool XoaDauSach(string MaDauSach)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "XoaDauSach";
+            command.Connection = conn;
+
+            command.Parameters.Add("@madausach", SqlDbType.NChar).Value = MaDauSach;
+
             int kq = command.ExecuteNonQuery();
             return kq > 0;
         }
