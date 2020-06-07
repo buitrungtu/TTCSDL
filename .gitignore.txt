@@ -1,0 +1,10 @@
+# Huynh config nhung file khong up len git 
+.vs/*
+BLL/obj/*
+BLL/bin/*
+DAL/obj/*
+DAL/bin/*
+DTO/obj/*
+DTO/bin/*
+QuanLyThuVien/obj/*
+QuanLyThuVien/bin/*
