@@ -604,5 +604,18 @@ namespace DAL
             reader.Close();
             return ltk;
         }
+        public bool XoaSach(string MaSach)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "XoaCuonSach";
+            command.Connection = conn;
+          
+            command.Parameters.Add("@masach", SqlDbType.NChar).Value = MaSach;
+           
+            int kq = command.ExecuteNonQuery();
+            return kq > 0;
+        }
     }
 }

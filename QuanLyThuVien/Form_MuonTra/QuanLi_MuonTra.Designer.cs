@@ -41,7 +41,7 @@
             this.thôngTinChiTiếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lvThongKe = new System.Windows.Forms.ListView();
+            this.lvMuonTra = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -150,17 +150,17 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(953, 527);
+            this.tabPage2.Size = new System.Drawing.Size(973, 536);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh Sách Quá Hạn";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.lvThongKe);
+            this.tabPage1.Controls.Add(this.lvMuonTra);
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -169,48 +169,48 @@
             this.tabPage1.Text = "Tất cả mượn trả";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lvThongKe
+            // lvMuonTra
             // 
-            this.lvThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(217)))));
-            this.lvThongKe.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvMuonTra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(217)))));
+            this.lvMuonTra.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.lvThongKe.ContextMenuStrip = this.contextMenuStrip1;
-            this.lvThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvThongKe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvThongKe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
-            this.lvThongKe.FullRowSelect = true;
-            this.lvThongKe.GridLines = true;
-            this.lvThongKe.HideSelection = false;
-            this.lvThongKe.Location = new System.Drawing.Point(3, 3);
-            this.lvThongKe.Name = "lvThongKe";
-            this.lvThongKe.Size = new System.Drawing.Size(967, 521);
-            this.lvThongKe.TabIndex = 29;
-            this.lvThongKe.UseCompatibleStateImageBehavior = false;
-            this.lvThongKe.View = System.Windows.Forms.View.Details;
+            this.lvMuonTra.ContextMenuStrip = this.contextMenuStrip1;
+            this.lvMuonTra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvMuonTra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvMuonTra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
+            this.lvMuonTra.FullRowSelect = true;
+            this.lvMuonTra.GridLines = true;
+            this.lvMuonTra.HideSelection = false;
+            this.lvMuonTra.Location = new System.Drawing.Point(3, 3);
+            this.lvMuonTra.Name = "lvMuonTra";
+            this.lvMuonTra.Size = new System.Drawing.Size(967, 521);
+            this.lvMuonTra.TabIndex = 29;
+            this.lvMuonTra.UseCompatibleStateImageBehavior = false;
+            this.lvMuonTra.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Mã Sách";
+            this.columnHeader1.Text = "Mã Mượn Trả";
             this.columnHeader1.Width = 130;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Mã Người Mượn";
-            this.columnHeader2.Width = 197;
+            this.columnHeader2.Text = "Mã Sách";
+            this.columnHeader2.Width = 203;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Tên Người Mượn";
+            this.columnHeader3.Text = "Mã Độc Giả";
             this.columnHeader3.Width = 195;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Tên Sách";
-            this.columnHeader4.Width = 188;
+            this.columnHeader4.Text = "Tên Độc Giả";
+            this.columnHeader4.Width = 216;
             // 
             // columnHeader5
             // 
@@ -237,6 +237,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "QuanLi_MuonTra";
             this.Size = new System.Drawing.Size(981, 640);
+            this.Load += new System.EventHandler(this.QuanLi_MuonTra_Load);
             this.panel3.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -257,7 +258,7 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinChiTiếtToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ListView lvThongKe;
+        private System.Windows.Forms.ListView lvMuonTra;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

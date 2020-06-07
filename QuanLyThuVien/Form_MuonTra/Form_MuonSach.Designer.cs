@@ -88,6 +88,7 @@
             this.button2.TabIndex = 60;
             this.button2.Text = "Xác nhận";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -186,9 +187,9 @@
             this.lbMaNV.ForeColor = System.Drawing.Color.White;
             this.lbMaNV.Location = new System.Drawing.Point(179, 194);
             this.lbMaNV.Name = "lbMaNV";
-            this.lbMaNV.Size = new System.Drawing.Size(56, 22);
+            this.lbMaNV.Size = new System.Drawing.Size(21, 22);
             this.lbMaNV.TabIndex = 67;
-            this.lbMaNV.Text = "lbMã";
+            this.lbMaNV.Text = "3";
             // 
             // label6
             // 

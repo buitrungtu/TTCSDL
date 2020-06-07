@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MuonTra\ChiTietMuonTra.cs" />
+    <Compile Include="MuonTra\MuonSach.cs" />
+    <Compile Include="MuonTra\GiaoDienMuonTra.cs" />
     <Compile Include="Sach\DauSach.cs" />
     <Compile Include="Sach\GiaSach.cs" />
     <Compile Include="Sach\Sach.cs" />

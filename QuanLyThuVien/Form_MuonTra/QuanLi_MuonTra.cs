@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO.MuonTra;
+using BLL;
 
 namespace QuanLyThuVien.Form_MuonTra
 {
     public partial class QuanLi_MuonTra : UserControl
     {
+        MuonTraBLL MTBLL = new MuonTraBLL();
         public QuanLi_MuonTra()
         {
             InitializeComponent();
@@ -25,8 +28,35 @@ namespace QuanLyThuVien.Form_MuonTra
 
         private void thôngTinChiTiếtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_ChiTietMuonTra temp = new Form_ChiTietMuonTra();
-            temp.Show();
+            if (lvMuonTra.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = lvMuonTra.SelectedItems[0];
+                GiaoDienMuonTra s = lvi.Tag as GiaoDienMuonTra;
+                Form_ChiTietMuonTra temp = new Form_ChiTietMuonTra();
+                temp.MaMuonTra = s.MaMuonTra;
+                temp.Show();
+
+            }                        
+        }
+        void HienThiGiaoDien()
+        {
+            List<GiaoDienMuonTra> LS = new List<GiaoDienMuonTra>();
+            LS = MTBLL.HienThiGiaoDienMuonTra();
+            lvMuonTra.Items.Clear();
+            foreach (GiaoDienMuonTra s in LS)
+            {
+                ListViewItem lvi = new ListViewItem(s.MaMuonTra + "");
+                lvi.SubItems.Add(s.MaSach);               
+                lvi.SubItems.Add(s.MaDocGia +"");
+                lvi.SubItems.Add(s.TenDocGia);                
+                lvi.SubItems.Add(s.TinhTrang);
+                lvMuonTra.Items.Add(lvi);
+                lvi.Tag = s;
+            }
+        }
+        private void QuanLi_MuonTra_Load(object sender, EventArgs e)
+        {
+            HienThiGiaoDien();
         }
     }
 }

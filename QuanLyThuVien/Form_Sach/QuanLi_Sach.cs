@@ -86,7 +86,11 @@ namespace QuanLyThuVien.Form_Sach
                 temp.Show();
                 
             }
-            
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 cuốn sách");
+            }
+
         }
 
         
@@ -139,6 +143,33 @@ namespace QuanLyThuVien.Form_Sach
                 lvSach.Items.Add(lvi);
                 lvi.Tag = s;
             }
+        }
+
+        private void xóaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (lvSach.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = lvSach.SelectedItems[0];
+                Sach s = lvi.Tag as Sach;
+                DialogResult result = MessageBox.Show("Bạn có chắc là muốn xóa cuốn sách này?", "Xác nhận lần nữa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (SBLL.XoaSach(s.MaSach))
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        HienThiSach();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 cuốn sách");
+            }
+            
         }
     }
 }

@@ -54,5 +54,9 @@ namespace BLL
         {
             return SAC.TimKiemSachChiTiet(temp);
         }
+        public bool XoaSach(string MaSach)
+        {
+            return SAC.XoaSach(MaSach);
+        }
     }
 }
