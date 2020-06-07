@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocGia\DocGia.cs" />
     <Compile Include="Sach\DauSach.cs" />
     <Compile Include="Sach\GiaSach.cs" />
     <Compile Include="Sach\Sach.cs" />
