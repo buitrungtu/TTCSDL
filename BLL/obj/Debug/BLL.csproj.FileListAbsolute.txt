@@ -9,3 +9,14 @@ D:\QuanLyThuVien\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\QuanLyThuVien\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\QuanLyThuVien\BLL\obj\Debug\BLL.dll
 D:\QuanLyThuVien\BLL\obj\Debug\BLL.pdb
+D:\TTCSDL\BLL\bin\Debug\BLL.dll
+D:\TTCSDL\BLL\bin\Debug\BLL.pdb
+D:\TTCSDL\BLL\bin\Debug\DAL.dll
+D:\TTCSDL\BLL\bin\Debug\DTO.dll
+D:\TTCSDL\BLL\bin\Debug\DAL.pdb
+D:\TTCSDL\BLL\bin\Debug\DTO.pdb
+D:\TTCSDL\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\TTCSDL\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\TTCSDL\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\TTCSDL\BLL\obj\Debug\BLL.dll
+D:\TTCSDL\BLL\obj\Debug\BLL.pdb

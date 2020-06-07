@@ -7,3 +7,12 @@ D:\QuanLyThuVien\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\QuanLyThuVien\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\QuanLyThuVien\DAL\obj\Debug\DAL.dll
 D:\QuanLyThuVien\DAL\obj\Debug\DAL.pdb
+D:\TTCSDL\DAL\bin\Debug\DAL.dll
+D:\TTCSDL\DAL\bin\Debug\DAL.pdb
+D:\TTCSDL\DAL\bin\Debug\DTO.dll
+D:\TTCSDL\DAL\bin\Debug\DTO.pdb
+D:\TTCSDL\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\TTCSDL\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\TTCSDL\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\TTCSDL\DAL\obj\Debug\DAL.dll
+D:\TTCSDL\DAL\obj\Debug\DAL.pdb
