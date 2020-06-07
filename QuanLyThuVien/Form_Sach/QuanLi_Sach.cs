@@ -89,11 +89,41 @@ namespace QuanLyThuVien.Form_Sach
             
         }
 
-        private void txbTimKiem_TextChanged(object sender, EventArgs e)
+        
+        private void btnTimKiemNangCao_Click(object sender, EventArgs e)
+        {
+            DauSach temp = new DauSach();
+            temp.TenDauSach = txbTenSach.Text;
+            temp.TacGia = txbTacGia.Text;
+            temp.TheLoai = txbTheLoai.Text;
+            temp.NhaXuatBan = txbNhaXB.Text;
+            temp.NgonNgu = txbNgonNgu.Text;
+
+            lvSach.Items.Clear();
+            List<Sach> tts = SBLL.TimKiemSachChiTiet(temp);
+            foreach (Sach s in tts)
+            {
+                ListViewItem lvi = new ListViewItem(s.MaSach + "");
+                lvi.SubItems.Add(s.TenDauSach);
+                if (s.Tap == 0) lvi.SubItems.Add("Chưa có thông tin");
+                else lvi.SubItems.Add(s.Tap.ToString());
+                if (s.LanTaiBan == 0) lvi.SubItems.Add("Chưa có thông tin");
+                else lvi.SubItems.Add(s.LanTaiBan.ToString());
+                lvi.SubItems.Add(s.ViTri);
+                lvi.SubItems.Add(s.TacGia);
+                lvi.SubItems.Add(s.TheLoai);
+                lvi.SubItems.Add(s.NgonNgu);
+                lvi.SubItems.Add(s.NXB);
+                lvSach.Items.Add(lvi);
+                lvi.Tag = s;
+            }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
             lvSach.Items.Clear();
-            List<ThongTinSach> tts = SBLL.TimKiemSach(txbTimKiem.Text);
-            foreach (ThongTinSach s in tts)
+            List<Sach> tts = SBLL.TimKiemSach(txbTimKiem.Text);
+            foreach (Sach s in tts)
             {
                 ListViewItem lvi = new ListViewItem(s.MaSach + "");
                 lvi.SubItems.Add(s.TenDauSach);
@@ -101,11 +131,11 @@ namespace QuanLyThuVien.Form_Sach
                 else lvi.SubItems.Add(s.Tap + "");
                 if (s.LanTaiBan == 0) lvi.SubItems.Add("Chưa có thông tin");
                 else lvi.SubItems.Add(s.LanTaiBan + "");
-                lvi.SubItems.Add("Chưa có thông tin");
-                lvi.SubItems.Add(s.TenTacGia);
+                lvi.SubItems.Add(s.ViTri);
+                lvi.SubItems.Add(s.TacGia);
                 lvi.SubItems.Add(s.TheLoai);
                 lvi.SubItems.Add(s.NgonNgu);
-                lvi.SubItems.Add(s.NhaXuatBan);
+                lvi.SubItems.Add(s.NXB);
                 lvSach.Items.Add(lvi);
                 lvi.Tag = s;
             }

@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_MuonTra\Form_ChiTietMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MuonTra\Form_ChiTietMuonTra.Designer.cs">
+      <DependentUpon>Form_ChiTietMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MuonTra\Form_MuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MuonTra\Form_MuonSach.Designer.cs">
+      <DependentUpon>Form_MuonSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_MuonTra\QuanLi_MuonTra.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MuonTra\Form_ChiTietMuonTra.resx">
+      <DependentUpon>Form_ChiTietMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MuonTra\Form_MuonSach.resx">
+      <DependentUpon>Form_MuonSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_MuonTra\QuanLi_MuonTra.resx">
       <DependentUpon>QuanLi_MuonTra.cs</DependentUpon>
@@ -156,9 +174,6 @@
       <Project>{54a853cc-fd4d-4ce3-a3e0-88969059a9a2}</Project>
       <Name>DTO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="HinhAnh\unnamed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

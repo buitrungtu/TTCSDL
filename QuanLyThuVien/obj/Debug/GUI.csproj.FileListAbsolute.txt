@@ -22,3 +22,5 @@ D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Sach.ThemDauSach.res
 D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Sach.ThongKe.resources
 D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Sach.ThongTinChiTietSach.resources
 D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Sach.SuaDauSach.resources
+D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_MuonTra.Form_MuonSach.resources
+D:\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_MuonTra.Form_ChiTietMuonTra.resources

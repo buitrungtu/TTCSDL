@@ -11,7 +11,7 @@ namespace DAL
 {
     public class SachAccess : DatabaseAccess
     {
-        public List<Sach> LayToanBoSach()
+        public List<Sach> HienThiGiaoDienSach()
         {
             List<Sach> LS = new List<Sach>();
             OpenConnection();
@@ -124,8 +124,23 @@ namespace DAL
             while (reader.Read())
             {
                 GiaSach temp = new GiaSach();
-                temp.MaGiaSach = reader.GetInt32(0);
-                temp.TenGiaSach = reader.GetString(1);
+                if (!reader.IsDBNull(0))
+                {
+                    temp.MaGiaSach = reader.GetInt32(0);
+                }
+                else
+                {
+
+                }
+                if (!reader.IsDBNull(1))
+                {
+                    temp.TenGiaSach = reader.GetString(1);
+                }
+                else
+                {
+
+                }
+            
                 dstemp.Add(temp);
             }
             reader.Close();
@@ -418,9 +433,9 @@ namespace DAL
             int kq = command.ExecuteNonQuery();
             return kq > 0;
         }
-        public List<ThongTinSach> TimKiemSach(string thongtin)
+        public List<Sach> TimKiemSach(string thongtin)
         {
-            List<ThongTinSach> ltk = new List<ThongTinSach>();
+            List<Sach> ltk = new List<Sach>();
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
@@ -430,7 +445,7 @@ namespace DAL
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                ThongTinSach kq = new ThongTinSach();
+                Sach kq = new Sach();
                 kq.MaSach = reader.GetString(0);
                 if (!reader.IsDBNull(1))
                 {
@@ -458,61 +473,136 @@ namespace DAL
                 }
                 if (!reader.IsDBNull(4))
                 {
-                    kq.SoTrang = reader.GetInt32(4);
+                    kq.ViTri = reader.GetString(4);
                 }
                 else
                 {
-                    kq.SoTrang = 0;
+                    kq.ViTri = "Chưa có thông tin";
                 }
                 if (!reader.IsDBNull(5))
                 {
-                    kq.TinhTrang = reader.GetString(5);
+                    kq.TacGia = reader.GetString(5);
                 }
                 else
                 {
-                    kq.TinhTrang = "Chưa có thông tin";
+                    kq.TacGia = "Chưa có thông tin";
                 }
                 if (!reader.IsDBNull(6))
                 {
-                    kq.NamXuatBan = reader.GetDateTime(6);
-                }
-                if (!reader.IsDBNull(7))
-                {
-                    kq.TenTacGia = reader.GetString(7);
-                }
-                else
-                {
-                    kq.TenTacGia = "Chưa có thông tin";
-                }
-                if (!reader.IsDBNull(8))
-                {
-                    kq.NhaXuatBan = reader.GetString(8);
-                }
-                else
-                {
-                    kq.NhaXuatBan = "Chưa có thông tin";
-                }
-                if (!reader.IsDBNull(9))
-                {
-                    kq.TheLoai = reader.GetString(9);
+                    kq.TheLoai = reader.GetString(6);
                 }
                 else
                 {
                     kq.TheLoai = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(10))
+                if (!reader.IsDBNull(7))
                 {
-                    kq.NgonNgu = reader.GetString(10);
+                    kq.NgonNgu = reader.GetString(7);
                 }
                 else
                 {
                     kq.NgonNgu = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(8))
+                {
+                    kq.NXB = reader.GetString(8);
+                }
+                else
+                {
+                    kq.NXB = "Chưa có thông tin";
+                }
+               
+                ltk.Add(kq);
+            }
+            reader.Close();
+            return ltk;
+        }
+        public List<Sach> TimKiemSachChiTiet(DauSach temp)
+        {
+            List<Sach> ltk = new List<Sach>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from dbo.TimKiemNangCao(@tendausach,@tacgia,@theloai,@ngonngu,@nxb)";
+            command.Connection = conn;
+            command.Parameters.Add("@tendausach", SqlDbType.NVarChar).Value = temp.TenDauSach;
+            command.Parameters.Add("@tacgia", SqlDbType.NVarChar).Value = temp.TacGia;
+            command.Parameters.Add("@theloai", SqlDbType.NVarChar).Value = temp.TheLoai;
+            command.Parameters.Add("@ngonngu", SqlDbType.NVarChar).Value = temp.NgonNgu;
+            command.Parameters.Add("@nxb", SqlDbType.NVarChar).Value = temp.NhaXuatBan;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Sach kq = new Sach();
+                kq.MaSach = reader.GetString(0);
+                if (!reader.IsDBNull(1))
+                {
+                    kq.TenDauSach = reader.GetString(1);
+                }
+                else
+                {
+                    kq.TenDauSach = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(2))
+                {
+                    kq.Tap = reader.GetInt32(2);
+                }
+                else
+                {
+                    kq.Tap = 0;
+                }
+                if (!reader.IsDBNull(3))
+                {
+                    kq.LanTaiBan = reader.GetInt32(3);
+                }
+                else
+                {
+                    kq.LanTaiBan = 0;
+                }
+                if (!reader.IsDBNull(4))
+                {
+                    kq.ViTri = reader.GetString(4);
+                }
+                else
+                {
+                    kq.ViTri = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(5))
+                {
+                    kq.TacGia = reader.GetString(5);
+                }
+                else
+                {
+                    kq.TacGia = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(6))
+                {
+                    kq.TheLoai = reader.GetString(6);
+                }
+                else
+                {
+                    kq.TheLoai = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(7))
+                {
+                    kq.NgonNgu = reader.GetString(7);
+                }
+                else
+                {
+                    kq.NgonNgu = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(8))
+                {
+                    kq.NXB = reader.GetString(8);
+                }
+                else
+                {
+                    kq.NXB = "Chưa có thông tin";
                 }
                 ltk.Add(kq);
             }
             reader.Close();
             return ltk;
         }
-        
     }
 }

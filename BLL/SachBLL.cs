@@ -12,7 +12,7 @@ namespace BLL
         SachAccess SAC = new SachAccess();
         public List<Sach> LayToanBoSach()
         {
-            return SAC.LayToanBoSach();
+            return SAC.HienThiGiaoDienSach();
         }
         public List<DauSach> LayDauSach()
         {
@@ -46,9 +46,13 @@ namespace BLL
         {
             return SAC.SuaDauSach(temp);
         }
-        public List<ThongTinSach> TimKiemSach(string thongtin)
+        public List<Sach> TimKiemSach(string thongtin)
         {
             return SAC.TimKiemSach(thongtin);
+        }
+        public List<Sach> TimKiemSachChiTiet(DauSach temp)
+        {
+            return SAC.TimKiemSachChiTiet(temp);
         }
     }
 }
