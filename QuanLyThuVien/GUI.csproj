@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_DocGia\QuanLyDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_DocGia\QuanLyDocGia.Designer.cs">
+      <DependentUpon>QuanLyDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_MuonTra\Form_ChiTietMuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DocGia\QuanLyDocGia.resx">
+      <DependentUpon>QuanLyDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_MuonTra\Form_ChiTietMuonTra.resx">
       <DependentUpon>Form_ChiTietMuonTra.cs</DependentUpon>
