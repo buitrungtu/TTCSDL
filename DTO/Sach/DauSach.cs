@@ -14,5 +14,6 @@ namespace DTO.Sach
         public string TheLoai { get; set; }
         public string NgonNgu { get; set; }
         public string NhaXuatBan { get; set; }
+        public int SoCuon { get; set; }
     }
 }

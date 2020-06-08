@@ -22,5 +22,13 @@ namespace BLL
         {
             return MTAC.ChoMuonSach(temp);
         }
+        public bool SuaThongTinMuonTra(int MaMT,DateTime HanMuon,string MaSach)
+        {
+            return MTAC.SuaThongTinMuonTra(MaMT, HanMuon, MaSach);
+        }
+        public List<GiaoDienMuonTra> TimKiemMuonTra(string strthongtin)
+        {
+            return MTAC.TimKiemMuonTra(strthongtin);
+        }
     }
 }

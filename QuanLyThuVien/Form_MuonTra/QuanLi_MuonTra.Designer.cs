@@ -35,6 +35,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.txbTimKiem = new System.Windows.Forms.TextBox();
             this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -112,6 +115,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(63)))), ((int)(((byte)(112)))));
+            this.panel3.Controls.Add(this.btnTimKiem);
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.txbTimKiem);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button1);
@@ -120,6 +126,41 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(981, 68);
             this.panel3.TabIndex = 26;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.Location = new System.Drawing.Point(927, 12);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(53, 37);
+            this.btnTimKiem.TabIndex = 10;
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(554, 14);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(116, 39);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Tìm kiếm:";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // txbTimKiem
+            // 
+            this.txbTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbTimKiem.Location = new System.Drawing.Point(666, 17);
+            this.txbTimKiem.Name = "txbTimKiem";
+            this.txbTimKiem.Size = new System.Drawing.Size(260, 31);
+            this.txbTimKiem.TabIndex = 8;
             // 
             // xóaToolStripMenuItem
             // 
@@ -239,6 +280,7 @@
             this.Size = new System.Drawing.Size(981, 640);
             this.Load += new System.EventHandler(this.QuanLi_MuonTra_Load);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -265,5 +307,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox txbTimKiem;
     }
 }

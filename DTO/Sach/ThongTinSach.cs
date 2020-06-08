@@ -28,5 +28,6 @@ namespace DTO.Sach
         public int Tang { get; set; }
         public int Ngan { get; set; }
         public string HinhAnh { get; set; }
+        public int SoCuon { get; set; }
     }
 }

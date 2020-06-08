@@ -35,7 +35,6 @@ namespace QuanLyThuVien.Form_MuonTra
                 Form_ChiTietMuonTra temp = new Form_ChiTietMuonTra();
                 temp.MaMuonTra = s.MaMuonTra;
                 temp.Show();
-
             }                        
         }
         void HienThiGiaoDien()
@@ -57,6 +56,23 @@ namespace QuanLyThuVien.Form_MuonTra
         private void QuanLi_MuonTra_Load(object sender, EventArgs e)
         {
             HienThiGiaoDien();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            List<GiaoDienMuonTra> LS = new List<GiaoDienMuonTra>();
+            LS = MTBLL.TimKiemMuonTra(txbTimKiem.Text);
+            lvMuonTra.Items.Clear();
+            foreach (GiaoDienMuonTra s in LS)
+            {
+                ListViewItem lvi = new ListViewItem(s.MaMuonTra + "");
+                lvi.SubItems.Add(s.MaSach);
+                lvi.SubItems.Add(s.MaDocGia + "");
+                lvi.SubItems.Add(s.TenDocGia);
+                lvi.SubItems.Add(s.TinhTrang);
+                lvMuonTra.Items.Add(lvi);
+                lvi.Tag = s;
+            }
         }
     }
 }

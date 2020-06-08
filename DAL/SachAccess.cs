@@ -58,31 +58,39 @@ namespace DAL
                 }
                 if (!reader.IsDBNull(5))
                 {
-                    temp.TacGia = reader.GetString(5);
+                    temp.NguoiMuon = reader.GetString(5);
+                }
+                else
+                {
+                    temp.NguoiMuon = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(6))
+                {
+                    temp.TacGia = reader.GetString(6);
                 }
                 else
                 {
                     temp.TacGia = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(6))
+                if (!reader.IsDBNull(7))
                 {
-                    temp.TheLoai = reader.GetString(6);
+                    temp.TheLoai = reader.GetString(7);
                 }
                 else
                 {
                     temp.TheLoai = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(7))
+                if (!reader.IsDBNull(8))
                 {
-                    temp.NgonNgu = reader.GetString(7);
+                    temp.NgonNgu = reader.GetString(8);
                 }
                 else
                 {
                     temp.NgonNgu = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(8))
+                if (!reader.IsDBNull(9))
                 {
-                    temp.NXB = reader.GetString(8);
+                    temp.NXB = reader.GetString(9);
                 }
                 else
                 {
@@ -481,37 +489,45 @@ namespace DAL
                 }
                 if (!reader.IsDBNull(5))
                 {
-                    kq.TacGia = reader.GetString(5);
+                    kq.NguoiMuon = reader.GetString(5);
+                }
+                else
+                {
+                    kq.NguoiMuon = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(6))
+                {
+                    kq.TacGia = reader.GetString(6);
                 }
                 else
                 {
                     kq.TacGia = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(6))
+                if (!reader.IsDBNull(7))
                 {
-                    kq.TheLoai = reader.GetString(6);
+                    kq.TheLoai = reader.GetString(7);
                 }
                 else
                 {
                     kq.TheLoai = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(7))
+                if (!reader.IsDBNull(8))
                 {
-                    kq.NgonNgu = reader.GetString(7);
+                    kq.NgonNgu = reader.GetString(8);
                 }
                 else
                 {
                     kq.NgonNgu = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(8))
+                if (!reader.IsDBNull(9))
                 {
-                    kq.NXB = reader.GetString(8);
+                    kq.NXB = reader.GetString(9);
                 }
                 else
                 {
                     kq.NXB = "Chưa có thông tin";
                 }
-               
+
                 ltk.Add(kq);
             }
             reader.Close();
@@ -569,31 +585,39 @@ namespace DAL
                 }
                 if (!reader.IsDBNull(5))
                 {
-                    kq.TacGia = reader.GetString(5);
+                    kq.NguoiMuon = reader.GetString(5);
+                }
+                else
+                {
+                    kq.NguoiMuon = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(6))
+                {
+                    kq.TacGia = reader.GetString(6);
                 }
                 else
                 {
                     kq.TacGia = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(6))
+                if (!reader.IsDBNull(7))
                 {
-                    kq.TheLoai = reader.GetString(6);
+                    kq.TheLoai = reader.GetString(7);
                 }
                 else
                 {
                     kq.TheLoai = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(7))
+                if (!reader.IsDBNull(8))
                 {
-                    kq.NgonNgu = reader.GetString(7);
+                    kq.NgonNgu = reader.GetString(8);
                 }
                 else
                 {
                     kq.NgonNgu = "Chưa có thông tin";
                 }
-                if (!reader.IsDBNull(8))
+                if (!reader.IsDBNull(9))
                 {
-                    kq.NXB = reader.GetString(8);
+                    kq.NXB = reader.GetString(9);
                 }
                 else
                 {
@@ -687,6 +711,159 @@ namespace DAL
 
             int kq = command.ExecuteNonQuery();
             return kq > 0;
+        }
+        public List<DauSach> ThongKeDauSach()
+        {
+            List<DauSach> LS = new List<DauSach>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from ThongKeDauSach";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                DauSach temp = new DauSach();
+                temp.MaDauSach = reader.GetString(0);
+                if (!reader.IsDBNull(1))
+                {
+                    temp.TenDauSach = reader.GetString(1);
+                }
+                else
+                {
+                    temp.TenDauSach = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(2))
+                {
+                    temp.TacGia = reader.GetString(2);
+                }
+                else
+                {
+                    temp.TacGia = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(3))
+                {
+                    temp.NgonNgu = reader.GetString(3);
+                }
+                else
+                {
+                    temp.NgonNgu = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(4))
+                {
+                    temp.TheLoai = reader.GetString(4);
+                }
+                else
+                {
+                    temp.TheLoai = "Chưa có thông tin";
+                }
+                
+                if (!reader.IsDBNull(5))
+                {
+                    temp.NhaXuatBan = reader.GetString(5);
+                }
+                else
+                {
+                    temp.NhaXuatBan = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(6))
+                {
+                    temp.SoCuon = reader.GetInt32(6);
+                }
+                else
+                {
+                    temp.SoCuon = 0;
+                }
+
+                LS.Add(temp);
+            }
+            reader.Close();
+            return LS;
+        }
+        public List<ThongTinSach> ThongKeCuonSach()
+        {
+            List<ThongTinSach> LS = new List<ThongTinSach>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from ThongKeCuonSach";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                ThongTinSach temp = new ThongTinSach();
+                temp.TenDauSach = reader.GetString(0);
+                if (!reader.IsDBNull(1))
+                {
+                    temp.Tap = reader.GetInt32(1);
+                }
+                else
+                {
+                    temp.Tap = 0;
+                }
+                if (!reader.IsDBNull(2))
+                {
+                    temp.LanTaiBan = reader.GetInt32(2);
+                }
+                else
+                {
+                    temp.LanTaiBan = 0;
+                }
+                if (!reader.IsDBNull(3))
+                {
+                    temp.SoTrang = reader.GetInt32(3);
+                }
+                else
+                {
+                    temp.SoTrang = 0;
+                }
+                if (!reader.IsDBNull(4))
+                {
+                    temp.SoCuon = reader.GetInt32(4);
+                }
+                else
+                {
+                    temp.SoCuon = 0;
+                }
+                
+                LS.Add(temp);
+            }
+            reader.Close();
+            return LS;
+        }
+        public List<TheLoai> ThongKeTheLoai()
+        {
+            List<TheLoai> LS = new List<TheLoai>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from ThongKeTheLoai";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                TheLoai temp = new TheLoai();
+                temp.TenTG = reader.GetString(0);
+                if (!reader.IsDBNull(1))
+                {
+                    temp.SoDauSach = reader.GetInt32(1);
+                }
+                else
+                {
+                    temp.SoDauSach = 0;
+                }
+                if (!reader.IsDBNull(2))
+                {
+                    temp.SoCuonSach = reader.GetInt32(2);
+                }
+                else
+                {
+                    temp.SoCuonSach = 0;
+                }                
+                LS.Add(temp);
+            }
+            reader.Close();
+            return LS;
         }
     }
 }

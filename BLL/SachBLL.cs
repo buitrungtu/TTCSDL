@@ -66,5 +66,17 @@ namespace BLL
         {
             return SAC.HienThiGiaoDienDauSach();
         }
+        public List<DauSach> ThongKeDauSach()
+        {
+            return SAC.ThongKeDauSach();
+        }
+        public List<ThongTinSach> ThongKeCuonSach()
+        {
+            return SAC.ThongKeCuonSach();
+        }
+        public List<TheLoai> ThongKeTheLoai()
+        {
+            return SAC.ThongKeTheLoai();
+        }
     }
 }

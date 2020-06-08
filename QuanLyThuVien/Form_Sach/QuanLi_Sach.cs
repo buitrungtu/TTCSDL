@@ -46,6 +46,7 @@ namespace QuanLyThuVien.Form_Sach
                 if (s.LanTaiBan == 0) lvi.SubItems.Add("Chưa có thông tin");
                 else lvi.SubItems.Add(s.LanTaiBan + "");
                 lvi.SubItems.Add(s.ViTri);
+                lvi.SubItems.Add(s.NguoiMuon);
                 lvi.SubItems.Add(s.TacGia);
                 lvi.SubItems.Add(s.TheLoai);
                 lvi.SubItems.Add(s.NgonNgu);
@@ -130,6 +131,7 @@ namespace QuanLyThuVien.Form_Sach
                 if (s.LanTaiBan == 0) lvi.SubItems.Add("Chưa có thông tin");
                 else lvi.SubItems.Add(s.LanTaiBan.ToString());
                 lvi.SubItems.Add(s.ViTri);
+                lvi.SubItems.Add(s.NguoiMuon);
                 lvi.SubItems.Add(s.TacGia);
                 lvi.SubItems.Add(s.TheLoai);
                 lvi.SubItems.Add(s.NgonNgu);
@@ -152,6 +154,7 @@ namespace QuanLyThuVien.Form_Sach
                 if (s.LanTaiBan == 0) lvi.SubItems.Add("Chưa có thông tin");
                 else lvi.SubItems.Add(s.LanTaiBan + "");
                 lvi.SubItems.Add(s.ViTri);
+                lvi.SubItems.Add(s.NguoiMuon);
                 lvi.SubItems.Add(s.TacGia);
                 lvi.SubItems.Add(s.TheLoai);
                 lvi.SubItems.Add(s.NgonNgu);

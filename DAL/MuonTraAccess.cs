@@ -115,6 +115,78 @@ namespace DAL
             
             int kq = command.ExecuteNonQuery();
             return kq > 0;
-        } 
+        }
+        public bool SuaThongTinMuonTra(int MaMT,DateTime HanMuon,string MaSach)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "SuaThongTinMuonTra";
+            command.Connection = conn;
+
+            command.Parameters.Add("@mamuontra", SqlDbType.Int).Value = MaMT;
+            command.Parameters.Add("@hanmuon", SqlDbType.DateTime).Value = HanMuon;
+            command.Parameters.Add("@masach", SqlDbType.NChar).Value = MaSach;           
+            
+            int kq = command.ExecuteNonQuery();
+            return kq > 0;
+
+        }
+        public List<GiaoDienMuonTra> TimKiemMuonTra(string strthongtin)
+        {
+            List<GiaoDienMuonTra> LS = new List<GiaoDienMuonTra>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from dbo.TimKiemMuonTra(@strthongtin)";
+            command.Connection = conn;
+            command.Parameters.Add("@strthongtin", SqlDbType.NVarChar).Value = strthongtin;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                GiaoDienMuonTra temp = new GiaoDienMuonTra();
+                temp.MaMuonTra = reader.GetInt32(0);
+                if (!reader.IsDBNull(1))
+                {
+                    temp.MaSach = reader.GetString(1);
+                }
+                else
+                {
+                    temp.MaSach = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(2))
+                {
+                    temp.MaDocGia = reader.GetInt32(2);
+                }
+                else
+                {
+                    temp.MaDocGia = 0;
+                }
+                if (!reader.IsDBNull(3))
+                {
+                    temp.TenDocGia = reader.GetString(3);
+                }
+                else
+                {
+                    temp.TenDocGia = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(4))
+                {
+                    int datra = reader.GetInt32(4);
+                    if (datra == 0) temp.TinhTrang = "Chưa trả";
+                    else
+                    {
+                        temp.TinhTrang = "Đã trả";
+                    }
+                }
+                else
+                {
+                    temp.TinhTrang = "Chưa có thông tin";
+                }
+                LS.Add(temp);
+            }
+            reader.Close();
+            return LS;
+        }
     }
 }

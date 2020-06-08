@@ -112,6 +112,7 @@
             this.button2.TabIndex = 77;
             this.button2.Text = "Xác nhận";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
