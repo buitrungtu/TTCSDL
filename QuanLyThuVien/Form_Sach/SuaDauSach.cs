@@ -15,7 +15,7 @@ namespace QuanLyThuVien.Form_Sach
     public partial class SuaDauSach : Form
     {
         public string MaDauSach;
-        public bool SuaThanhCong;
+        public bool SuaThanhCong = false;
         SachBLL SBLL = new SachBLL();
         public SuaDauSach()
         {

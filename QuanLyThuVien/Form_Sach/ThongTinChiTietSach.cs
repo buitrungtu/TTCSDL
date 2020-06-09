@@ -65,10 +65,19 @@ namespace QuanLyThuVien.Form_Sach
             txbNamXB.Text = temp.NamXuatBan.ToString("dd/MM/yyyy");
             txbTinhTrang.Text = temp.TinhTrang;
             cbGia.Text = temp.MaGiaSach.ToString() + " - " + temp.TenGiaSach;
-            if (temp.HinhAnh != "")
+            try
             {
-                pictureBox1.Image = new Bitmap(Application.StartupPath + "\\HinhAnh\\"+temp.HinhAnh);
+                if (temp.HinhAnh != "")
+                {
+                    pictureBox1.Image = new Bitmap(Application.StartupPath + "\\HinhAnh\\" + temp.HinhAnh);
+                }
             }
+            catch
+            {
+                MessageBox.Show("Lỗi hình ảnh rồi bạn ơi");
+            }
+
+           
             // Gợi ý dữ liệu cho giá sách
             List<GiaSach> LGS = SBLL.LayGiaSach();
             foreach (GiaSach a in LGS)

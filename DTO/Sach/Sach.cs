@@ -18,6 +18,7 @@ namespace DTO.Sach
         public string NgonNgu { get; set; }
         public string NXB { get; set; }
         public string ViTri { get; set; }
-        public string HinhAnh { get; set; }        
+        public string HinhAnh { get; set; }
+        public string NguoiMuon { get; set; }
     }
 }
