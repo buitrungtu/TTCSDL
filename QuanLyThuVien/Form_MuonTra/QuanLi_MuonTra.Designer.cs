@@ -38,7 +38,6 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.txbTimKiem = new System.Windows.Forms.TextBox();
-            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.thôngTinChiTiếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -162,12 +161,6 @@
             this.txbTimKiem.Size = new System.Drawing.Size(260, 31);
             this.txbTimKiem.TabIndex = 8;
             // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.xóaToolStripMenuItem.Text = "Xóa ";
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -177,10 +170,9 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinChiTiếtToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.xóaToolStripMenuItem});
+            this.toolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 54);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 32);
             // 
             // thôngTinChiTiếtToolStripMenuItem
             // 
@@ -294,7 +286,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinChiTiếtToolStripMenuItem;
