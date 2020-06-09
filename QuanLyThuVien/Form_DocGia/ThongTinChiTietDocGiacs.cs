@@ -16,6 +16,7 @@ namespace QuanLyThuVien.Form_DocGia
     {
         public int maDocGia { get; set; }
         private DocGiaBLL docGiaBLL;
+        private DocGia docGia;
         public ThongTinChiTietDocGiacs(int mDg)
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace QuanLyThuVien.Form_DocGia
 
         private void LoadThongTinChiTietDocGia()
         {
-            DocGia docGia = docGiaBLL.ThongTinChiTietDocGia(maDocGia);
+            docGia = docGiaBLL.ThongTinChiTietDocGia(maDocGia);
             lbMaDocGia.Text = docGia.maDocGia.ToString();
             lbHotenDocGia.Text = docGia.tenDocGia;
             lbNgaysinh.Text = docGia.ngaySinh.ToString();
@@ -59,10 +60,7 @@ namespace QuanLyThuVien.Form_DocGia
             }
         }
 
-        private void suaThongTinDocGia(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void onClickTraSach(object sender, EventArgs e)
         {
@@ -72,7 +70,6 @@ namespace QuanLyThuVien.Form_DocGia
                 SachDangMuon sachDangMuon = lvi.Tag as SachDangMuon;
                 if (docGiaBLL.TraSach(sachDangMuon.maMuonTra) )
                 {
-                    MessageBox.Show("Đã trả sách thành công");
                     //Huynh load lại sach da tra 
                     LoadThongTinChiTietDocGia();
                 } else
@@ -86,6 +83,13 @@ namespace QuanLyThuVien.Form_DocGia
                 MessageBox.Show("Bạn phải chọn 1 độc giả");
             }
 
+        }
+
+        private void suaThongTInDocGia(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SuaThongTinDocGia suaThongTinDocGia = new SuaThongTinDocGia(docGia);
+
+            suaThongTinDocGia.Show();
         }
     }
 }

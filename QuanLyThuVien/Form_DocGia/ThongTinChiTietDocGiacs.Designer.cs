@@ -38,13 +38,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.lbMaDocGia = new System.Windows.Forms.Label();
-            this.lbHotenDocGia = new System.Windows.Forms.Label();
-            this.lbNgaysinh = new System.Windows.Forms.Label();
-            this.lbDonVi = new System.Windows.Forms.Label();
-            this.lbSdt = new System.Windows.Forms.Label();
-            this.lbQuequan = new System.Windows.Forms.Label();
             this.listViewSachDangMuon = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -53,6 +46,13 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trảSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.lbMaDocGia = new System.Windows.Forms.Label();
+            this.lbHotenDocGia = new System.Windows.Forms.Label();
+            this.lbNgaysinh = new System.Windows.Forms.Label();
+            this.lbDonVi = new System.Windows.Forms.Label();
+            this.lbSdt = new System.Windows.Forms.Label();
+            this.lbQuequan = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -153,6 +153,68 @@
             this.panel1.Size = new System.Drawing.Size(776, 248);
             this.panel1.TabIndex = 8;
             // 
+            // listViewSachDangMuon
+            // 
+            this.listViewSachDangMuon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(217)))));
+            this.listViewSachDangMuon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader4,
+            this.columnHeader3,
+            this.columnHeader5});
+            this.listViewSachDangMuon.ContextMenuStrip = this.contextMenuStrip1;
+            this.listViewSachDangMuon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewSachDangMuon.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewSachDangMuon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
+            this.listViewSachDangMuon.FullRowSelect = true;
+            this.listViewSachDangMuon.GridLines = true;
+            this.listViewSachDangMuon.HideSelection = false;
+            this.listViewSachDangMuon.Location = new System.Drawing.Point(0, 0);
+            this.listViewSachDangMuon.Name = "listViewSachDangMuon";
+            this.listViewSachDangMuon.Size = new System.Drawing.Size(776, 248);
+            this.listViewSachDangMuon.TabIndex = 32;
+            this.listViewSachDangMuon.UseCompatibleStateImageBehavior = false;
+            this.listViewSachDangMuon.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã sách";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên đầu sách";
+            this.columnHeader2.Width = 250;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Tên tác giả ";
+            this.columnHeader4.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Ngày mượn ";
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Mượn của nhân viên";
+            this.columnHeader5.Width = 200;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trảSáchToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(118, 26);
+            // 
+            // trảSáchToolStripMenuItem
+            // 
+            this.trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
+            this.trảSáchToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.trảSáchToolStripMenuItem.Text = "Trả sách";
+            this.trảSáchToolStripMenuItem.Click += new System.EventHandler(this.onClickTraSach);
+            // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
@@ -164,7 +226,8 @@
             this.linkLabel2.TabIndex = 9;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Sửa thông tin độc giả";
-            this.linkLabel2.Click += new System.EventHandler(this.suaThongTinDocGia);
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.suaThongTInDocGia);
+            
             // 
             // lbMaDocGia
             // 
@@ -232,68 +295,6 @@
             this.lbQuequan.TabIndex = 15;
             this.lbQuequan.Text = "lb";
             // 
-            // listViewSachDangMuon
-            // 
-            this.listViewSachDangMuon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(217)))));
-            this.listViewSachDangMuon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader4,
-            this.columnHeader3,
-            this.columnHeader5});
-            this.listViewSachDangMuon.ContextMenuStrip = this.contextMenuStrip1;
-            this.listViewSachDangMuon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewSachDangMuon.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewSachDangMuon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
-            this.listViewSachDangMuon.FullRowSelect = true;
-            this.listViewSachDangMuon.GridLines = true;
-            this.listViewSachDangMuon.HideSelection = false;
-            this.listViewSachDangMuon.Location = new System.Drawing.Point(0, 0);
-            this.listViewSachDangMuon.Name = "listViewSachDangMuon";
-            this.listViewSachDangMuon.Size = new System.Drawing.Size(776, 248);
-            this.listViewSachDangMuon.TabIndex = 32;
-            this.listViewSachDangMuon.UseCompatibleStateImageBehavior = false;
-            this.listViewSachDangMuon.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã sách";
-            this.columnHeader1.Width = 100;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên đầu sách";
-            this.columnHeader2.Width = 250;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Tên tác giả ";
-            this.columnHeader4.Width = 120;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Ngày mượn ";
-            this.columnHeader3.Width = 120;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Mượn của nhân viên";
-            this.columnHeader5.Width = 200;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trảSáchToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
-            // 
-            // trảSáchToolStripMenuItem
-            // 
-            this.trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
-            this.trảSáchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.trảSáchToolStripMenuItem.Text = "Trả sách";
-            this.trảSáchToolStripMenuItem.Click += new System.EventHandler(this.onClickTraSach);
-            // 
             // ThongTinChiTietDocGiacs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,7 +318,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ThongTinChiTietDocGiacs";
-            this.Text = "ThongTinChiTietDocGiacs";
+            this.Text = "Thông tin chi tiết Độc giả";
             this.panel1.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
