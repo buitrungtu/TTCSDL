@@ -50,3 +50,8 @@ D:\TTCSDL\QuanLyThuVien\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\TTCSDL\QuanLyThuVien\obj\Debug\GUI.csproj.CopyComplete
 D:\TTCSDL\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 D:\TTCSDL\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+D:\TTCSDL\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_DocGia.QuanLyDocGia.resources
+D:\TTCSDL\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_ThongKe.fThongKe.resources
+D:\TTCSDL\QuanLyThuVien\bin\Debug\MetroFramework.Design.dll
+D:\TTCSDL\QuanLyThuVien\bin\Debug\MetroFramework.dll
+D:\TTCSDL\QuanLyThuVien\bin\Debug\MetroFramework.Fonts.dll

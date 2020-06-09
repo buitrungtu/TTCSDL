@@ -57,10 +57,8 @@
             this.listViewDocGia.Name = "listViewDocGia";
             this.listViewDocGia.Size = new System.Drawing.Size(800, 450);
             this.listViewDocGia.TabIndex = 28;
-            this.Load += new System.EventHandler(this.QuanLyDocGiaLoad);
             this.listViewDocGia.UseCompatibleStateImageBehavior = false;
             this.listViewDocGia.View = System.Windows.Forms.View.Details;
-            
             // 
             // columnHeader1
             // 
@@ -99,6 +97,7 @@
             this.Controls.Add(this.listViewDocGia);
             this.Name = "QuanLyDocGia";
             this.Size = new System.Drawing.Size(800, 450);
+            this.Load += new System.EventHandler(this.QuanLyDocGiaLoad);
             this.ResumeLayout(false);
 
         }

@@ -6,7 +6,11 @@ D:\QuanLyThuVien\DTO\obj\Debug\DTO.dll
 D:\QuanLyThuVien\DTO\obj\Debug\DTO.pdb
 D:\TTCSDL\DTO\bin\Debug\DTO.dll
 D:\TTCSDL\DTO\bin\Debug\DTO.pdb
-D:\TTCSDL\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 D:\TTCSDL\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\TTCSDL\DTO\obj\Debug\DTO.dll
 D:\TTCSDL\DTO\obj\Debug\DTO.pdb
+D:\TTCSDL\DTO\bin\Debug\MetroFramework.Design.dll
+D:\TTCSDL\DTO\bin\Debug\MetroFramework.dll
+D:\TTCSDL\DTO\bin\Debug\MetroFramework.Fonts.dll
+D:\TTCSDL\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\TTCSDL\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

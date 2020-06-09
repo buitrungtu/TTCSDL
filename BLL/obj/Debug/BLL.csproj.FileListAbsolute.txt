@@ -20,3 +20,6 @@ D:\TTCSDL\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\TTCSDL\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\TTCSDL\BLL\obj\Debug\BLL.dll
 D:\TTCSDL\BLL\obj\Debug\BLL.pdb
+D:\TTCSDL\BLL\bin\Debug\MetroFramework.Design.dll
+D:\TTCSDL\BLL\bin\Debug\MetroFramework.dll
+D:\TTCSDL\BLL\bin\Debug\MetroFramework.Fonts.dll

@@ -16,3 +16,6 @@ D:\TTCSDL\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\TTCSDL\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\TTCSDL\DAL\obj\Debug\DAL.dll
 D:\TTCSDL\DAL\obj\Debug\DAL.pdb
+D:\TTCSDL\DAL\bin\Debug\MetroFramework.Design.dll
+D:\TTCSDL\DAL\bin\Debug\MetroFramework.dll
+D:\TTCSDL\DAL\bin\Debug\MetroFramework.Fonts.dll
