@@ -23,20 +23,35 @@ namespace QuanLyThuVien.Form_DocGia
         }
         private void QuanLyDocGiaLoad(object sender, EventArgs e)
         {
-            HienThiDocGia();
+            HienThiDocGia(null);
         }
-        private void HienThiDocGia()
+        private void btnThemDocGia_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void HienThiDocGia(string text)
         {
            
             List<DocGia> listDocGia = new List<DocGia>();
-            listDocGia = docGiaBLL.LayToanBoSach();
+            if (text == null)
+            {
+                listDocGia = docGiaBLL.LayToanBoDocGia();
+            } else
+            {
+                listDocGia = docGiaBLL.TimKiemDocGia(text);
+                if (listDocGia.Count == 0)
+                {
+                    MessageBox.Show("Không có độc giả cần tìm");
+                }
+            }
+           
             listViewDocGia.Items.Clear();
             foreach (DocGia docGia in listDocGia)
             {
                 ListViewItem listViewItem = new ListViewItem(docGia.maDocGia + "");
                 listViewItem.SubItems.Add(docGia.tenDocGia);
+                listViewItem.SubItems.Add(docGia.ngaySinh + "");
                 listViewItem.SubItems.Add(docGia.donVi);
-                listViewItem.SubItems.Add(docGia.ngaySinh +"");
                 listViewItem.SubItems.Add(docGia.sdt +"");
                 listViewItem.SubItems.Add(docGia.queQuan);
 
@@ -45,5 +60,52 @@ namespace QuanLyThuVien.Form_DocGia
             }
         }
 
+        private void onClickThemDocgia(object sender, EventArgs e)
+        {
+
+        }
+
+        private void onClickTimKiemDocGIa(object sender, EventArgs e)
+        {
+            timKiemDocGia(txtboxTkDocGia.Text);
+
+
+        }
+        private void timKiemDocGia(string textTimkiem)
+        {
+            if (textTimkiem.Length != 0)
+            {
+                HienThiDocGia(textTimkiem);
+            } else
+            {
+                HienThiDocGia(null);
+            }
+           
+        }
+
+        private void txtBoxTimKiemKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                timKiemDocGia(txtboxTkDocGia.Text);
+            }
+        }
+
+        private void clickItemThongTinChiTietDocGia(object sender, EventArgs e)
+        {
+            if (listViewDocGia.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = listViewDocGia.SelectedItems[0];
+                DocGia docGia = lvi.Tag as DocGia;
+                ThongTinChiTietDocGiacs temp = new ThongTinChiTietDocGiacs(docGia.maDocGia);
+               
+                temp.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 độc giả");
+            }
+        }
     }
 }

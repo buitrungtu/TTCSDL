@@ -11,14 +11,29 @@ namespace BLL
     public class DocGiaBLL
     {
         DocGiaAccess DGA = new DocGiaAccess();
-        public List<DocGia> LayToanBoSach()
+        public List<DocGia> LayToanBoDocGia()
         {
-            List < DocGia > docGias = DGA.HienThiGiaoDienDocGia();
-            foreach (DocGia docGia in docGias) {
-                Console.WriteLine("MDG " + docGia.maDocGia + "TenDocGia " + docGia.tenDocGia);
-            }
-
+            
             return DGA.HienThiGiaoDienDocGia();
+        }
+
+        public List<DocGia> TimKiemDocGia(string textSearch)
+        {
+            return DGA.TimKiemDocGia(textSearch);
+        }
+        public DocGia ThongTinChiTietDocGia(int maDocGia)
+        {
+           
+            return DGA.ThongTinChiTietDocGia(maDocGia);
+        }
+
+        public List<SachDangMuon> HienThiListSachDangMuon(int maDocGia)
+        {
+            return DGA.HienThiListSachDangMuon(maDocGia);
+        }
+        public bool TraSach(int maMuonTra)
+        {
+            return DGA.TraSach(maMuonTra);
         }
     }
 }
