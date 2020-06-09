@@ -65,6 +65,12 @@
     <Compile Include="Form_DocGia\SuaThongTinDocGia.Designer.cs">
       <DependentUpon>SuaThongTinDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_DocGia\ThemDocGIa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DocGia\ThemDocGIa.Designer.cs">
+      <DependentUpon>ThemDocGIa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_DocGia\ThongTinChiTietDocGiacs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DocGia\SuaThongTinDocGia.resx">
       <DependentUpon>SuaThongTinDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DocGia\ThemDocGIa.resx">
+      <DependentUpon>ThemDocGIa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DocGia\ThongTinChiTietDocGiacs.resx">
       <DependentUpon>ThongTinChiTietDocGiacs.cs</DependentUpon>

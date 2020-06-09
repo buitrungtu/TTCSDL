@@ -35,5 +35,13 @@ namespace BLL
         {
             return DGA.TraSach(maMuonTra);
         }
+        public bool SuaDocGia(DocGia docGia)
+        {
+            return DGA.SuaThongTinDocGia(docGia);
+        }
+        public bool XoaDocGia(DocGia docGia)
+        {
+            return DGA.XoaDocGia(docGia);
+        }
     }
 }

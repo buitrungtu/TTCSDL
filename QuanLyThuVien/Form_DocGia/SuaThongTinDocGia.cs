@@ -1,4 +1,5 @@
-﻿using DTO.DocGia;
+﻿using BLL;
+using DTO.DocGia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,11 @@ namespace QuanLyThuVien.Form_DocGia
     public partial class SuaThongTinDocGia : Form
     {
         public DocGia docGia { get; set; }
+        private DocGiaBLL docGiaBLL;
         public SuaThongTinDocGia(DocGia docGiaSetView)
         {
             InitializeComponent();
+            docGiaBLL = new DocGiaBLL();
             docGia = docGiaSetView;
             lbSuaMaDocGia.Text = docGia.maDocGia.ToString();
             txtBoxSuaTenDocGia.Text = docGia.tenDocGia;
@@ -34,6 +37,22 @@ namespace QuanLyThuVien.Form_DocGia
 
         private void luuThongTinDocGia(object sender, EventArgs e)
         {
+            DocGia suaDocGia = new DocGia();
+            suaDocGia.maDocGia = docGia.maDocGia;
+            suaDocGia.tenDocGia = txtBoxSuaTenDocGia.Text;
+            suaDocGia.donVi = txtBoxDonVi.Text;
+            suaDocGia.ngaySinh = DateTime.Parse(txtBoxNgaySinh.Text);
+            suaDocGia.queQuan = txtBoxQuequan.Text;
+            suaDocGia.sdt = Int32.Parse(txtBoxSdt.Text);
+            if (docGiaBLL.SuaDocGia(suaDocGia))
+            {
+                ThongTinChiTietDocGiacs thongTinChiTietDocGiacs = new ThongTinChiTietDocGiacs(suaDocGia.maDocGia);
+                thongTinChiTietDocGiacs.Show();
+            } else
+            {
+                MessageBox.Show("Sửa thông tin lỗi");
+            }
+            Close();
 
         }
     }

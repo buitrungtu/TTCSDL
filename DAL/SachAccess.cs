@@ -95,7 +95,7 @@ namespace DAL
                 else
                 {
                     temp.NXB = "Chưa có thông tin";
-                }                                                              
+                }
                 LS.Add(temp);
             }
             reader.Close();

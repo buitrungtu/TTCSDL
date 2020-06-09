@@ -191,8 +191,9 @@
             // xóaĐộcGiảToolStripMenuItem
             // 
             this.xóaĐộcGiảToolStripMenuItem.Name = "xóaĐộcGiảToolStripMenuItem";
-            this.xóaĐộcGiảToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.xóaĐộcGiảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.xóaĐộcGiảToolStripMenuItem.Text = "Xóa độc giả";
+            this.xóaĐộcGiảToolStripMenuItem.Click += new System.EventHandler(this.xoaDocGia);
             // 
             // QuanLyDocGia
             // 

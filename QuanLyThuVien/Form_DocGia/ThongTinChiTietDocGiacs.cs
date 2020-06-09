@@ -28,7 +28,7 @@ namespace QuanLyThuVien.Form_DocGia
 
         }
 
-        private void LoadThongTinChiTietDocGia()
+        public void LoadThongTinChiTietDocGia()
         {
             docGia = docGiaBLL.ThongTinChiTietDocGia(maDocGia);
             lbMaDocGia.Text = docGia.maDocGia.ToString();
@@ -90,6 +90,7 @@ namespace QuanLyThuVien.Form_DocGia
             SuaThongTinDocGia suaThongTinDocGia = new SuaThongTinDocGia(docGia);
 
             suaThongTinDocGia.Show();
+            Close();
         }
     }
 }

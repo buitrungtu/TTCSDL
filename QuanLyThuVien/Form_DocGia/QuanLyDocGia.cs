@@ -107,5 +107,30 @@ namespace QuanLyThuVien.Form_DocGia
                 MessageBox.Show("Bạn phải chọn 1 độc giả");
             }
         }
+
+        private void xoaDocGia(object sender, EventArgs e)
+        {
+            if (listViewDocGia.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = listViewDocGia.SelectedItems[0];
+                DocGia docGia = lvi.Tag as DocGia;
+                if (docGiaBLL.HienThiListSachDangMuon(docGia.maDocGia).Count != 0) {
+                    MessageBox.Show("Độc giả này đang mượn sách nên không xóa được");
+                } else
+                {
+                    // Huynh xoa doc gia
+                   if (!docGiaBLL.XoaDocGia(docGia))
+                    {
+                        MessageBox.Show("Xóa độc giả không thành công");
+                    }
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn 1 độc giả");
+            }
+          
+        }
     }
 }

@@ -277,8 +277,36 @@ namespace DAL
 
             int kq = command.ExecuteNonQuery();
             return kq > 0;
+        }
+        public bool SuaThongTinDocGia(DocGia suaDocGia)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "EXEC suadocgia @maDocGia, @tenDocGia, " +
+                "       @donVi, @ngaySinh, @sdt, @queQuan";
+            command.Connection = conn;
+            command.Parameters.Add("@maDocGia", SqlDbType.Int).Value = suaDocGia.maDocGia;
+            command.Parameters.Add("@tenDocGia", SqlDbType.NVarChar).Value = suaDocGia.tenDocGia;
+            command.Parameters.Add("@donVi", SqlDbType.NVarChar).Value = suaDocGia.donVi;
+            command.Parameters.Add("@sdt", SqlDbType.Int).Value = suaDocGia.sdt;
+            command.Parameters.Add("@queQuan", SqlDbType.NVarChar).Value = suaDocGia.queQuan;
+            command.Parameters.Add("@ngaySinh", SqlDbType.DateTime).Value = suaDocGia.ngaySinh;
 
+            int kq = command.ExecuteNonQuery();
+            return kq > 0;
+        }
+        public bool XoaDocGia(DocGia docGia)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "EXEC xoadocgia @maDocGia";
+            command.Connection = conn;
+            command.Parameters.Add("@maDocGia", SqlDbType.Int).Value = docGia.maDocGia;
 
+            int kq = command.ExecuteNonQuery();
+            return kq > 0;
         }
     }
 }
