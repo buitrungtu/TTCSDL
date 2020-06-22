@@ -1,4 +1,5 @@
 ﻿using DAL;
+using DTO;
 using DTO.Sach;
 using DTO.TheLoai;
 using System;
@@ -11,10 +12,19 @@ namespace BLL
 {
     public class ThongKeBLL
     {
+        ThongKeAccess TKA = new ThongKeAccess();
         TheLoaiAccess TLA = new TheLoaiAccess();
         public List<TheLoai> LayDanhSachTheLoai()
         {
             return TLA.LayDanhSachTheLoai();
+        }
+        public List<DauSachDuocMuonNhieu> DauSachMuonNhieu()
+        {
+            return TKA.DauSachMuonNhieu();
+        }
+        public List<DauSachDuocMuonNhieu> SachConLai()
+        {
+            return TKA.SachConLai();
         }
     }
 }

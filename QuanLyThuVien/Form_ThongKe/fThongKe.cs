@@ -11,16 +11,22 @@ using DAL;
 using System.Data.SqlClient;
 using System.Data.Common;
 using DTO.TheLoai;
+using MetroFramework.Controls;
+using BLL;
 
 namespace QuanLyThuVien.Form_ThongKe
 {
     public partial class fThongKe : UserControl
     {
         TheLoaiAccess tla = new TheLoaiAccess();
+        ThongKeBLL thongKeBLL = new ThongKeBLL();
         public fThongKe()
         {
             InitializeComponent();
+            DauSachMuonNhieu();
             LoadListTheLoai();
+            SachConLai();
+            TheLoaiYeuThich();
         }
         public void LoadListTheLoai()
         {
@@ -52,6 +58,49 @@ namespace QuanLyThuVien.Form_ThongKe
             }
         }
 
-        
+        public void DauSachMuonNhieu()
+        {
+            var list = thongKeBLL.DauSachMuonNhieu().ToList();
+            lvDauSachMuonNhieu.Items.Clear();
+            int i = 1;
+            foreach (var item in list)
+            {
+                ListViewItem lvi = new ListViewItem(i + "");
+                lvi.SubItems.Add(item.TenDauSach);
+                lvi.SubItems.Add(item.Tap + "");
+                lvi.SubItems.Add(item.SoLuotMuon+"");
+                lvDauSachMuonNhieu.Items.Add(lvi);
+                i++;
+            }
+        }
+        public void SachConLai()
+        {
+            var list = thongKeBLL.SachConLai().ToList();
+            lvSachConLai.Items.Clear();
+            int i = 1;
+            foreach (var item in list)
+            {
+                ListViewItem lvi = new ListViewItem(i + "");
+                lvi.SubItems.Add(item.TenDauSach);
+                lvi.SubItems.Add(item.Tap + "");
+                lvi.SubItems.Add(item.SoLuotMuon + "");
+                lvSachConLai.Items.Add(lvi);
+                i++;
+            }
+        }
+        public void TheLoaiYeuThich()
+        {
+            var list = new ThongKeAccess().TheLoaiYeuThich().ToList();
+            lvTheLoai.Items.Clear();
+            int i = 1;
+            foreach (var item in list)
+            {
+                ListViewItem lvi = new ListViewItem(i + "");
+                lvi.SubItems.Add(item.TenTheLoai);
+                lvi.SubItems.Add(item.SoLuot + "");
+                lvTheLoai.Items.Add(lvi);
+                i++;
+            }
+        }
     }
 }

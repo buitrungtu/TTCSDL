@@ -55,3 +55,4 @@ D:\TTCSDL\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_ThongKe.fThongKe.resources
 D:\TTCSDL\QuanLyThuVien\bin\Debug\MetroFramework.Design.dll
 D:\TTCSDL\QuanLyThuVien\bin\Debug\MetroFramework.dll
 D:\TTCSDL\QuanLyThuVien\bin\Debug\MetroFramework.Fonts.dll
+D:\TTCSDL\QuanLyThuVien\obj\Debug\QuanLyThuVien.Form_Login.fLogin.resources

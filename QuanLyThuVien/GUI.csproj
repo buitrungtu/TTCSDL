@@ -67,6 +67,12 @@
     <Compile Include="Form_DocGia\QuanLyDocGia.Designer.cs">
       <DependentUpon>QuanLyDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Login\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_MuonTra\Form_ChiTietMuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DocGia\QuanLyDocGia.resx">
       <DependentUpon>QuanLyDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_MuonTra\Form_ChiTietMuonTra.resx">
       <DependentUpon>Form_ChiTietMuonTra.cs</DependentUpon>

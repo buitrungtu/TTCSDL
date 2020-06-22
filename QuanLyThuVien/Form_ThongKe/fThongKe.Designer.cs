@@ -29,58 +29,66 @@
         private void InitializeComponent()
         {
             this.tabThongKe = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lvDauSachMuonNhieu = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayout3 = new System.Windows.Forms.FlowLayoutPanel();
             this.lvSachTheoTheLoai = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.flowLayout3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lvSachConLai = new System.Windows.Forms.ListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lvTheLoai = new System.Windows.Forms.ListView();
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabThongKe.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.metroTabPage4.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabThongKe
             // 
             this.tabThongKe.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabThongKe.Controls.Add(this.metroTabPage1);
             this.tabThongKe.Controls.Add(this.metroTabPage2);
             this.tabThongKe.Controls.Add(this.metroTabPage3);
+            this.tabThongKe.Controls.Add(this.metroTabPage1);
+            this.tabThongKe.Controls.Add(this.metroTabPage4);
             this.tabThongKe.ItemSize = new System.Drawing.Size(364, 40);
             this.tabThongKe.Location = new System.Drawing.Point(3, 3);
             this.tabThongKe.Multiline = true;
             this.tabThongKe.Name = "tabThongKe";
-            this.tabThongKe.SelectedIndex = 2;
+            this.tabThongKe.SelectedIndex = 3;
             this.tabThongKe.Size = new System.Drawing.Size(839, 564);
             this.tabThongKe.TabIndex = 0;
             this.tabThongKe.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabThongKe.UseSelectable = true;
             // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.metroTabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroTabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 44);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.metroTabPage1.Size = new System.Drawing.Size(831, 516);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "       Số lượng sách còn trong kho         ";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
-            // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.panel2);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 10;
@@ -92,6 +100,55 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lvDauSachMuonNhieu);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 481);
+            this.panel2.TabIndex = 2;
+            // 
+            // lvDauSachMuonNhieu
+            // 
+            this.lvDauSachMuonNhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(217)))));
+            this.lvDauSachMuonNhieu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader10});
+            this.lvDauSachMuonNhieu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvDauSachMuonNhieu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvDauSachMuonNhieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
+            this.lvDauSachMuonNhieu.FullRowSelect = true;
+            this.lvDauSachMuonNhieu.GridLines = true;
+            this.lvDauSachMuonNhieu.HideSelection = false;
+            this.lvDauSachMuonNhieu.Location = new System.Drawing.Point(0, 0);
+            this.lvDauSachMuonNhieu.Name = "lvDauSachMuonNhieu";
+            this.lvDauSachMuonNhieu.Size = new System.Drawing.Size(776, 481);
+            this.lvDauSachMuonNhieu.TabIndex = 38;
+            this.lvDauSachMuonNhieu.UseCompatibleStateImageBehavior = false;
+            this.lvDauSachMuonNhieu.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "STT";
+            this.columnHeader3.Width = 76;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Tên đầu sách";
+            this.columnHeader7.Width = 343;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Tập";
+            this.columnHeader8.Width = 116;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Số lượt mượn";
+            this.columnHeader10.Width = 133;
             // 
             // metroTabPage3
             // 
@@ -117,13 +174,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(685, 516);
             this.panel1.TabIndex = 3;
-            // 
-            // flowLayout3
-            // 
-            this.flowLayout3.Location = new System.Drawing.Point(3, 0);
-            this.flowLayout3.Name = "flowLayout3";
-            this.flowLayout3.Size = new System.Drawing.Size(142, 513);
-            this.flowLayout3.TabIndex = 2;
             // 
             // lvSachTheoTheLoai
             // 
@@ -172,6 +222,139 @@
             this.columnHeader5.Text = "Số lượng";
             this.columnHeader5.Width = 133;
             // 
+            // flowLayout3
+            // 
+            this.flowLayout3.Location = new System.Drawing.Point(3, 0);
+            this.flowLayout3.Name = "flowLayout3";
+            this.flowLayout3.Size = new System.Drawing.Size(142, 513);
+            this.flowLayout3.TabIndex = 2;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.metroTabPage1.Controls.Add(this.panel3);
+            this.metroTabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroTabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 44);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.metroTabPage1.Size = new System.Drawing.Size(831, 516);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "       Số lượng sách còn trong kho         ";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lvSachConLai);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(801, 496);
+            this.panel3.TabIndex = 2;
+            // 
+            // lvSachConLai
+            // 
+            this.lvSachConLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(217)))));
+            this.lvSachConLai.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader9,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13});
+            this.lvSachConLai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvSachConLai.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvSachConLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
+            this.lvSachConLai.FullRowSelect = true;
+            this.lvSachConLai.GridLines = true;
+            this.lvSachConLai.HideSelection = false;
+            this.lvSachConLai.Location = new System.Drawing.Point(0, 0);
+            this.lvSachConLai.Name = "lvSachConLai";
+            this.lvSachConLai.Size = new System.Drawing.Size(801, 496);
+            this.lvSachConLai.TabIndex = 38;
+            this.lvSachConLai.UseCompatibleStateImageBehavior = false;
+            this.lvSachConLai.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "STT";
+            this.columnHeader9.Width = 76;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Tên đầu sách";
+            this.columnHeader11.Width = 343;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Tập";
+            this.columnHeader12.Width = 116;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Số lượng";
+            this.columnHeader13.Width = 133;
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.Controls.Add(this.panel4);
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.HorizontalScrollbarSize = 10;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 44);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(831, 516);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "Thể loại yêu thích";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.VerticalScrollbarSize = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lvTheLoai);
+            this.panel4.Location = new System.Drawing.Point(17, 14);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(738, 458);
+            this.panel4.TabIndex = 2;
+            // 
+            // lvTheLoai
+            // 
+            this.lvTheLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(217)))));
+            this.lvTheLoai.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16});
+            this.lvTheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvTheLoai.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvTheLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
+            this.lvTheLoai.FullRowSelect = true;
+            this.lvTheLoai.GridLines = true;
+            this.lvTheLoai.HideSelection = false;
+            this.lvTheLoai.Location = new System.Drawing.Point(0, 0);
+            this.lvTheLoai.Name = "lvTheLoai";
+            this.lvTheLoai.Size = new System.Drawing.Size(738, 458);
+            this.lvTheLoai.TabIndex = 41;
+            this.lvTheLoai.UseCompatibleStateImageBehavior = false;
+            this.lvTheLoai.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "STT";
+            this.columnHeader14.Width = 76;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Tên thể loại";
+            this.columnHeader15.Width = 461;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Số lượt mượn";
+            this.columnHeader16.Width = 116;
+            // 
             // fThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,8 +363,14 @@
             this.Name = "fThongKe";
             this.Size = new System.Drawing.Size(845, 570);
             this.tabThongKe.ResumeLayout(false);
+            this.metroTabPage2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.metroTabPage4.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -199,5 +388,23 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ListView lvDauSachMuonNhieu;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ListView lvSachConLai;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private MetroFramework.Controls.MetroTabPage metroTabPage4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ListView lvTheLoai;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
     }
 }

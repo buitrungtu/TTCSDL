@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DauSachDuocMuonNhieu.cs" />
     <Compile Include="MuonTra\ChiTietMuonTra.cs" />
     <Compile Include="MuonTra\MuonSach.cs" />
     <Compile Include="MuonTra\GiaoDienMuonTra.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Sach\AddSach.cs" />
     <Compile Include="Sach\AddDauSach.cs" />
     <Compile Include="Sach\ThongTinSach.cs" />
+    <Compile Include="TheLoaiYeuThich.cs" />
     <Compile Include="TheLoai\TheLoai.cs" />
   </ItemGroup>
   <ItemGroup>
