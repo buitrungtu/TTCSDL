@@ -60,5 +60,37 @@ namespace QuanLyThuVien.Form_MuonTra
         {
             LoadThongTin();
         }
+        string ChuyenDoiNgayThang(string s)
+        {
+            try
+            {
+                string[] temp = s.Split('/');
+                return temp[1] + '/' + temp[0] + '/' + temp[2];
+            }
+            catch
+            {
+                return "";
+            }
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DateTime ngaytra = new DateTime();
+            if (DateTime.TryParse(ChuyenDoiNgayThang(txbHanMuon.Text), out ngaytra))
+            {
+                int MaMT = Int32.Parse(lbMaMuonTra.Text);
+                if (MTBLL.SuaThongTinMuonTra(MaMT,ngaytra, txbMaSach.Text))
+                {
+                    MessageBox.Show("Sửa thông tin thành công");
+                    LoadThongTin();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thông tin thất bại");
+                }
+            }
+            
+            
+        }
     }
 }

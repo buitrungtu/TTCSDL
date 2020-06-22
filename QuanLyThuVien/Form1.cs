@@ -58,7 +58,14 @@ namespace QuanLyThuVien
 
         private void btnMenu_Click_1(object sender, EventArgs e)
         {
-            timer1.Start();
+            //timer1.Start();
+            
+            if(panelLeft.Width == PanelWith) panelLeft.Width = 83;
+            else
+            {
+                panelLeft.Width = PanelWith;
+            }
+            
         }
 
         private void btnMuonTra_Click_1(object sender, EventArgs e)
@@ -70,26 +77,26 @@ namespace QuanLyThuVien
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {            
-                if (ThuNhoMenu)
+            if (ThuNhoMenu)
+            {
+                panelLeft.Width += 12;
+                if (panelLeft.Width >= PanelWith)
                 {
-                    panelLeft.Width += 12;
-                    if (panelLeft.Width >= PanelWith)
-                    {
                         timer1.Stop();
                         ThuNhoMenu = false;
                         this.Refresh();
-                    }
                 }
-                else
+            }
+            else
+            {
+                panelLeft.Width -= 12;
+                if (panelLeft.Width <= 83)
                 {
-                    panelLeft.Width -= 12;
-                    if (panelLeft.Width <= 83)
-                    {
                         timer1.Stop();
                         ThuNhoMenu = true;
                         this.Refresh();
-                    }
-                }            
+                }
+            }            
         }
 
         private void btnDocGia_Click_1(object sender, EventArgs e)

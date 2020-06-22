@@ -50,7 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="DauSachDuocMuonNhieu.cs" />
+=======
+    <Compile Include="DocGia\SachDangMuon.cs" />
+>>>>>>> 38a50ff453dd60729a81c510aa0f26bdf5225f8e
     <Compile Include="MuonTra\ChiTietMuonTra.cs" />
     <Compile Include="MuonTra\MuonSach.cs" />
     <Compile Include="MuonTra\GiaoDienMuonTra.cs" />
@@ -61,6 +65,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sach\AddSach.cs" />
     <Compile Include="Sach\AddDauSach.cs" />
+    <Compile Include="Sach\TheLoai.cs" />
     <Compile Include="Sach\ThongTinSach.cs" />
     <Compile Include="TheLoaiYeuThich.cs" />
     <Compile Include="TheLoai\TheLoai.cs" />

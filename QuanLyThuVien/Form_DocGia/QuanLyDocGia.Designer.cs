@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyDocGia));
+            this.btnThemDocGia = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.txtboxTkDocGia = new System.Windows.Forms.TextBox();
+            this.themDocGia = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.listViewDocGia = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -35,7 +43,81 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStripItemDocGia = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.thôngTinChiTiếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaĐộcGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.contextMenuStripItemDocGia.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnThemDocGia
+            // 
+            this.btnThemDocGia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnThemDocGia.FlatAppearance.BorderSize = 0;
+            this.btnThemDocGia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemDocGia.ForeColor = System.Drawing.Color.White;
+            this.btnThemDocGia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemDocGia.Location = new System.Drawing.Point(0, 0);
+            this.btnThemDocGia.Name = "btnThemDocGia";
+            this.btnThemDocGia.Size = new System.Drawing.Size(174, 68);
+            this.btnThemDocGia.TabIndex = 0;
+            this.btnThemDocGia.Text = "       Thêm sách";
+            this.btnThemDocGia.UseVisualStyleBackColor = true;
+            this.btnThemDocGia.Click += new System.EventHandler(this.btnThemDocGia_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(63)))), ((int)(((byte)(112)))));
+            this.panel1.Controls.Add(this.btnTimKiem);
+            this.panel1.Controls.Add(this.txtboxTkDocGia);
+            this.panel1.Controls.Add(this.themDocGia);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(794, 50);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.Location = new System.Drawing.Point(442, 0);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(53, 37);
+            this.btnTimKiem.TabIndex = 8;
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.onClickTimKiemDocGIa);
+            // 
+            // txtboxTkDocGia
+            // 
+            this.txtboxTkDocGia.Location = new System.Drawing.Point(336, 3);
+            this.txtboxTkDocGia.Name = "txtboxTkDocGia";
+            this.txtboxTkDocGia.Size = new System.Drawing.Size(100, 20);
+            this.txtboxTkDocGia.TabIndex = 1;
+            this.txtboxTkDocGia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBoxTimKiemKeyDown);
+            // 
+            // themDocGia
+            // 
+            this.themDocGia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.themDocGia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.themDocGia.ForeColor = System.Drawing.Color.White;
+            this.themDocGia.Location = new System.Drawing.Point(0, 0);
+            this.themDocGia.Name = "themDocGia";
+            this.themDocGia.Size = new System.Drawing.Size(111, 50);
+            this.themDocGia.TabIndex = 0;
+            this.themDocGia.Text = "Thêm độc giả";
+            this.themDocGia.UseVisualStyleBackColor = true;
+            this.themDocGia.Click += new System.EventHandler(this.onClickThemDocgia);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.listViewDocGia);
+            this.panel2.Location = new System.Drawing.Point(3, 59);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(794, 388);
+            this.panel2.TabIndex = 1;
             // 
             // listViewDocGia
             // 
@@ -47,6 +129,7 @@
             this.columnHeader3,
             this.columnHeader5,
             this.columnHeader6});
+            this.listViewDocGia.ContextMenuStrip = this.contextMenuStripItemDocGia;
             this.listViewDocGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewDocGia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewDocGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(36)))), ((int)(((byte)(64)))));
@@ -55,8 +138,13 @@
             this.listViewDocGia.HideSelection = false;
             this.listViewDocGia.Location = new System.Drawing.Point(0, 0);
             this.listViewDocGia.Name = "listViewDocGia";
+<<<<<<< HEAD
             this.listViewDocGia.Size = new System.Drawing.Size(800, 450);
             this.listViewDocGia.TabIndex = 28;
+=======
+            this.listViewDocGia.Size = new System.Drawing.Size(794, 388);
+            this.listViewDocGia.TabIndex = 31;
+>>>>>>> 38a50ff453dd60729a81c510aa0f26bdf5225f8e
             this.listViewDocGia.UseCompatibleStateImageBehavior = false;
             this.listViewDocGia.View = System.Windows.Forms.View.Details;
             // 
@@ -90,20 +178,52 @@
             this.columnHeader6.Text = "Quê Quán";
             this.columnHeader6.Width = 250;
             // 
+            // contextMenuStripItemDocGia
+            // 
+            this.contextMenuStripItemDocGia.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thôngTinChiTiếtToolStripMenuItem,
+            this.xóaĐộcGiảToolStripMenuItem});
+            this.contextMenuStripItemDocGia.Name = "contextMenuStripItemDocGia";
+            this.contextMenuStripItemDocGia.Size = new System.Drawing.Size(181, 70);
+            // 
+            // thôngTinChiTiếtToolStripMenuItem
+            // 
+            this.thôngTinChiTiếtToolStripMenuItem.Name = "thôngTinChiTiếtToolStripMenuItem";
+            this.thôngTinChiTiếtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thôngTinChiTiếtToolStripMenuItem.Text = "Thông tin chi tiết";
+            this.thôngTinChiTiếtToolStripMenuItem.Click += new System.EventHandler(this.clickItemThongTinChiTietDocGia);
+            // 
+            // xóaĐộcGiảToolStripMenuItem
+            // 
+            this.xóaĐộcGiảToolStripMenuItem.Name = "xóaĐộcGiảToolStripMenuItem";
+            this.xóaĐộcGiảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xóaĐộcGiảToolStripMenuItem.Text = "Xóa độc giả";
+            this.xóaĐộcGiảToolStripMenuItem.Click += new System.EventHandler(this.xoaDocGia);
+            // 
             // QuanLyDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listViewDocGia);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "QuanLyDocGia";
             this.Size = new System.Drawing.Size(800, 450);
             this.Load += new System.EventHandler(this.QuanLyDocGiaLoad);
+<<<<<<< HEAD
+=======
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.contextMenuStripItemDocGia.ResumeLayout(false);
+>>>>>>> 38a50ff453dd60729a81c510aa0f26bdf5225f8e
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Button btnThemDocGia;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView listViewDocGia;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -111,5 +231,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Button themDocGia;
+        private System.Windows.Forms.TextBox txtboxTkDocGia;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripItemDocGia;
+        private System.Windows.Forms.ToolStripMenuItem thôngTinChiTiếtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xóaĐộcGiảToolStripMenuItem;
     }
 }
