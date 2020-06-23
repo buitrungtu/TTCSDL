@@ -31,6 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,7 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <Compile Include="DauSachDuocMuonNhieu.cs" />
+=======
     <Compile Include="DocGia\SachDangMuon.cs" />
+>>>>>>> 38a50ff453dd60729a81c510aa0f26bdf5225f8e
     <Compile Include="MuonTra\ChiTietMuonTra.cs" />
     <Compile Include="MuonTra\DocGiaViPham.cs" />
     <Compile Include="MuonTra\MuonSach.cs" />
@@ -55,6 +68,11 @@
     <Compile Include="Sach\AddDauSach.cs" />
     <Compile Include="Sach\TheLoai.cs" />
     <Compile Include="Sach\ThongTinSach.cs" />
+    <Compile Include="TheLoaiYeuThich.cs" />
+    <Compile Include="TheLoai\TheLoai.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

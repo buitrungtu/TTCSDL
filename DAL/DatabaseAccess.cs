@@ -10,8 +10,9 @@ namespace DAL
 {
     public class DatabaseAccess
     {
-        // nhớ đổi chuỗi kết nối
-        string strConn = "Data Source=DESKTOP-RQNIR93\\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True";
+        public DatabaseAccess() { }
+        // không cần đổi chuỗi kếết nối nữa, dùng chung cho mọi máy
+        public string strConn = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True";
         protected SqlConnection conn = null;
         public void OpenConnection()
         {
@@ -39,5 +40,6 @@ namespace DAL
                 conn.Close();
             }
         }
+        
     }
 }
