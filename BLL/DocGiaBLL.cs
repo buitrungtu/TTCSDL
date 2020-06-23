@@ -31,17 +31,25 @@ namespace BLL
         {
             return DGA.HienThiListSachDangMuon(maDocGia);
         }
-        public bool TraSach(int maMuonTra)
+        public bool TraSach(string maSach)
         {
-            return DGA.TraSach(maMuonTra);
+            return DGA.TraSach(maSach);
         }
         public bool SuaDocGia(DocGia docGia)
         {
             return DGA.SuaThongTinDocGia(docGia);
         }
-        public bool XoaDocGia(DocGia docGia)
+        public int XoaDocGia(DocGia docGia)
         {
             return DGA.XoaDocGia(docGia);
+        }
+        public bool ThemDocGia(DocGia docGia)
+        {
+            return DGA.ThemDocGia(docGia);
+        }
+        public bool KiemTraXemSachCoTonTaikhong(string maSach)
+        {
+            return DGA.KiemTraXemSachCoTonTaikhong(maSach);
         }
     }
 }

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DocGia\SachDangMuon.cs" />
     <Compile Include="MuonTra\ChiTietMuonTra.cs" />
+    <Compile Include="MuonTra\DocGiaViPham.cs" />
     <Compile Include="MuonTra\MuonSach.cs" />
     <Compile Include="MuonTra\GiaoDienMuonTra.cs" />
     <Compile Include="DocGia\DocGia.cs" />

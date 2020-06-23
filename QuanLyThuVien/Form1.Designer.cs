@@ -175,9 +175,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(593, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 19);
+            this.label4.Size = new System.Drawing.Size(149, 19);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Bùi Trung Tú";
+            this.label4.Text = "Phòng Văn Huỳnh";
             // 
             // label7
             // 

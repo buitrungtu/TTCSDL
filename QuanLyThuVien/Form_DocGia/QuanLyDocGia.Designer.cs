@@ -46,6 +46,7 @@
             this.contextMenuStripItemDocGia = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.thôngTinChiTiếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaĐộcGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.làmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStripItemDocGia.SuspendLayout();
@@ -96,6 +97,7 @@
             this.txtboxTkDocGia.Name = "txtboxTkDocGia";
             this.txtboxTkDocGia.Size = new System.Drawing.Size(100, 20);
             this.txtboxTkDocGia.TabIndex = 1;
+           
             this.txtboxTkDocGia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBoxTimKiemKeyDown);
             // 
             // themDocGia
@@ -177,9 +179,10 @@
             // 
             this.contextMenuStripItemDocGia.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinChiTiếtToolStripMenuItem,
+            this.làmMớiToolStripMenuItem,
             this.xóaĐộcGiảToolStripMenuItem});
             this.contextMenuStripItemDocGia.Name = "contextMenuStripItemDocGia";
-            this.contextMenuStripItemDocGia.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStripItemDocGia.Size = new System.Drawing.Size(166, 70);
             // 
             // thôngTinChiTiếtToolStripMenuItem
             // 
@@ -194,6 +197,13 @@
             this.xóaĐộcGiảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.xóaĐộcGiảToolStripMenuItem.Text = "Xóa độc giả";
             this.xóaĐộcGiảToolStripMenuItem.Click += new System.EventHandler(this.xoaDocGia);
+            // 
+            // làmMớiToolStripMenuItem
+            // 
+            this.làmMớiToolStripMenuItem.Name = "làmMớiToolStripMenuItem";
+            this.làmMớiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.làmMớiToolStripMenuItem.Text = "Làm mới";
+            this.làmMớiToolStripMenuItem.Click += new System.EventHandler(this.lamMoi);
             // 
             // QuanLyDocGia
             // 
@@ -229,5 +239,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripItemDocGia;
         private System.Windows.Forms.ToolStripMenuItem thôngTinChiTiếtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xóaĐộcGiảToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem làmMớiToolStripMenuItem;
     }
 }

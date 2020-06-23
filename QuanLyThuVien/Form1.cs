@@ -29,8 +29,7 @@ namespace QuanLyThuVien
             PanelWith = panelLeft.Width;
             ThuNhoMenu = false;
             quanLiSach = new QuanLi_Sach();
-            quanLiMuonTra = new QuanLi_MuonTra();
-            quanLyDocGia = new QuanLyDocGia();
+            
             AddControlsToPanel(quanLiSach);
         }
 
@@ -48,6 +47,7 @@ namespace QuanLyThuVien
 
         private void btnSach_Click(object sender, EventArgs e)
         {
+            quanLiSach = new QuanLi_Sach();
             moveSidePanel(btnSach);
             AddControlsToPanel(quanLiSach);
         }
@@ -69,6 +69,7 @@ namespace QuanLyThuVien
 
         private void btnMuonTra_Click_1(object sender, EventArgs e)
         {
+            quanLiMuonTra = new QuanLi_MuonTra();
             moveSidePanel(btnMuonTra);
             
             AddControlsToPanel(quanLiMuonTra);
@@ -100,6 +101,7 @@ namespace QuanLyThuVien
 
         private void btnDocGia_Click_1(object sender, EventArgs e)
         {
+            quanLyDocGia = new QuanLyDocGia();
             moveSidePanel(btnDocGia);
             AddControlsToPanel(quanLyDocGia);
         }

@@ -38,11 +38,11 @@
             this.lbSuaMaDocGia = new System.Windows.Forms.Label();
             this.txtBoxSuaTenDocGia = new System.Windows.Forms.TextBox();
             this.txtBoxDonVi = new System.Windows.Forms.TextBox();
-            this.txtBoxNgaySinh = new System.Windows.Forms.TextBox();
             this.txtBoxSdt = new System.Windows.Forms.TextBox();
             this.txtBoxQuequan = new System.Windows.Forms.TextBox();
             this.btnLuuTTDocGia = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.dateTimeSuaNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -147,13 +147,6 @@
             this.txtBoxDonVi.Size = new System.Drawing.Size(220, 20);
             this.txtBoxDonVi.TabIndex = 9;
             // 
-            // txtBoxNgaySinh
-            // 
-            this.txtBoxNgaySinh.Location = new System.Drawing.Point(236, 246);
-            this.txtBoxNgaySinh.Name = "txtBoxNgaySinh";
-            this.txtBoxNgaySinh.Size = new System.Drawing.Size(220, 20);
-            this.txtBoxNgaySinh.TabIndex = 10;
-            // 
             // txtBoxSdt
             // 
             this.txtBoxSdt.Location = new System.Drawing.Point(236, 301);
@@ -190,17 +183,24 @@
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.huySua);
             // 
+            // dateTimeSuaNgaySinh
+            // 
+            this.dateTimeSuaNgaySinh.Location = new System.Drawing.Point(236, 245);
+            this.dateTimeSuaNgaySinh.Name = "dateTimeSuaNgaySinh";
+            this.dateTimeSuaNgaySinh.Size = new System.Drawing.Size(220, 20);
+            this.dateTimeSuaNgaySinh.TabIndex = 15;
+            // 
             // SuaThongTinDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(63)))), ((int)(((byte)(112)))));
             this.ClientSize = new System.Drawing.Size(499, 427);
+            this.Controls.Add(this.dateTimeSuaNgaySinh);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuuTTDocGia);
             this.Controls.Add(this.txtBoxQuequan);
             this.Controls.Add(this.txtBoxSdt);
-            this.Controls.Add(this.txtBoxNgaySinh);
             this.Controls.Add(this.txtBoxDonVi);
             this.Controls.Add(this.txtBoxSuaTenDocGia);
             this.Controls.Add(this.lbSuaMaDocGia);
@@ -231,10 +231,10 @@
         private System.Windows.Forms.Label lbSuaMaDocGia;
         private System.Windows.Forms.TextBox txtBoxSuaTenDocGia;
         private System.Windows.Forms.TextBox txtBoxDonVi;
-        private System.Windows.Forms.TextBox txtBoxNgaySinh;
         private System.Windows.Forms.TextBox txtBoxSdt;
         private System.Windows.Forms.TextBox txtBoxQuequan;
         private System.Windows.Forms.Button btnLuuTTDocGia;
         private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.DateTimePicker dateTimeSuaNgaySinh;
     }
 }

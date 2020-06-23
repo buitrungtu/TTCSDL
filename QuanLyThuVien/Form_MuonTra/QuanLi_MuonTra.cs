@@ -53,9 +53,26 @@ namespace QuanLyThuVien.Form_MuonTra
                 lvi.Tag = s;
             }
         }
+        void HienThiGiaoDienQuaHan()
+        {
+            List<DocGiaViPham> LS = new List<DocGiaViPham>();
+            LS = MTBLL.HienThiListSachDangMuonQuaHan();
+            listViewQuaHan.Items.Clear();
+            foreach (DocGiaViPham s in LS)
+            {
+                ListViewItem lvi = new ListViewItem(s.maDocGia + "");
+                lvi.SubItems.Add(s.tenDocGia);
+                lvi.SubItems.Add(s.soNgayQuaHan + "");
+                listViewQuaHan.Items.Add(lvi);
+                lvi.Tag = s;
+            }
+        }
         private void QuanLi_MuonTra_Load(object sender, EventArgs e)
         {
             HienThiGiaoDien();
+            HienThiGiaoDienQuaHan();
+
+
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -73,6 +90,17 @@ namespace QuanLyThuVien.Form_MuonTra
                 lvMuonTra.Items.Add(lvi);
                 lvi.Tag = s;
             }
+        }
+
+        private void lamMoiMuonTra(object sender, EventArgs e)
+        {
+            HienThiGiaoDien();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form_TraSach form_TraSach = new Form_TraSach();
+            form_TraSach.Show();
         }
     }
 }

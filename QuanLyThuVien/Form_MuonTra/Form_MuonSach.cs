@@ -53,24 +53,17 @@ namespace QuanLyThuVien.Form_MuonTra
             temp.MaSach = txbMaSach.Text;
             temp.MaDG = txbMaNguoiMuon.Text;
             temp.MaNV = Int32.Parse(lbMaNV.Text);
-            DateTime ngaytra = new DateTime();
-            if (DateTime.TryParse(ChuyenDoiNgayThang(txbNgayTra.Text), out ngaytra))
+            temp.NgayTra = DateTime.Parse(dateTimePicker1.Text);
+            if (MTBLL.ChoMuonSach(temp))
             {
-                temp.NgayTra = ngaytra;
-                if (MTBLL.ChoMuonSach(temp))
-                {
-                    MessageBox.Show("Mượn sách thành công!");
-                    this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("Mượn sách thất bại");
-                }
+                MessageBox.Show("Mượn sách thành công!");
+                this.Dispose();
             }
             else
             {
-                MessageBox.Show("Ngày trả không hợp lệ");
+                MessageBox.Show("Mượn sách thất bại");
             }
+
         }
     }
 }

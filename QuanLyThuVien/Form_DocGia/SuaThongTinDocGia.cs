@@ -24,7 +24,7 @@ namespace QuanLyThuVien.Form_DocGia
             lbSuaMaDocGia.Text = docGia.maDocGia.ToString();
             txtBoxSuaTenDocGia.Text = docGia.tenDocGia;
             txtBoxDonVi.Text = docGia.donVi;
-            txtBoxNgaySinh.Text = docGia.ngaySinh.ToString();
+            dateTimeSuaNgaySinh.Text = docGia.ngaySinh.ToString();
             txtBoxSdt.Text = docGia.sdt.ToString();
             txtBoxQuequan.Text = docGia.queQuan;
 
@@ -41,7 +41,7 @@ namespace QuanLyThuVien.Form_DocGia
             suaDocGia.maDocGia = docGia.maDocGia;
             suaDocGia.tenDocGia = txtBoxSuaTenDocGia.Text;
             suaDocGia.donVi = txtBoxDonVi.Text;
-            suaDocGia.ngaySinh = DateTime.Parse(txtBoxNgaySinh.Text);
+            suaDocGia.ngaySinh = DateTime.Parse(dateTimeSuaNgaySinh.Text);
             suaDocGia.queQuan = txtBoxQuequan.Text;
             suaDocGia.sdt = Int32.Parse(txtBoxSdt.Text);
             if (docGiaBLL.SuaDocGia(suaDocGia))

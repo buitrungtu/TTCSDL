@@ -188,5 +188,53 @@ namespace DAL
             reader.Close();
             return LS;
         }
+
+        public List<DocGiaViPham> HienThiListSachDangMuonQuaHan()
+        {
+            List<DocGiaViPham> docGiaViPhams = new List<DocGiaViPham>();
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "SELECT * FROM ThongKeDocGiaViPhamQuaHan";
+            command.Connection = conn;
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                DocGiaViPham docGiaViPham = new DocGiaViPham();
+                if (!reader.IsDBNull(0))
+                {
+                    docGiaViPham.maDocGia = reader.GetInt32(0);
+                }
+                else
+                {
+                    Console.WriteLine("null ma muon tra ");
+                }
+
+                if (!reader.IsDBNull(1))
+                {
+                    docGiaViPham.tenDocGia = reader.GetString(1);
+                }
+                else
+                {
+                    docGiaViPham.tenDocGia = "Chưa có thông tin";
+                }
+                if (!reader.IsDBNull(2))
+                {
+                    docGiaViPham.soNgayQuaHan = reader.GetInt32(2);
+                }
+                else
+                {
+                    docGiaViPham.soNgayQuaHan = -1;
+                }
+
+
+                docGiaViPhams.Add(docGiaViPham);
+            }
+
+            reader.Close();
+            return docGiaViPhams;
+        }
+
     }
 }

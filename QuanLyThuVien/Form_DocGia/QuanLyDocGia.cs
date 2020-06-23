@@ -19,7 +19,9 @@ namespace QuanLyThuVien.Form_DocGia
         {
             InitializeComponent();
             docGiaBLL = new DocGiaBLL();
-            
+            HienThiDocGia(null);
+
+
         }
         private void QuanLyDocGiaLoad(object sender, EventArgs e)
         {
@@ -62,7 +64,8 @@ namespace QuanLyThuVien.Form_DocGia
 
         private void onClickThemDocgia(object sender, EventArgs e)
         {
-
+            ThemDocGIa themDocGIa = new ThemDocGIa();
+            themDocGIa.Show();
         }
 
         private void onClickTimKiemDocGIa(object sender, EventArgs e)
@@ -119,9 +122,13 @@ namespace QuanLyThuVien.Form_DocGia
                 } else
                 {
                     // Huynh xoa doc gia
-                   if (!docGiaBLL.XoaDocGia(docGia))
+                   if (docGiaBLL.XoaDocGia(docGia) == 0)
+                   {
+                        MessageBox.Show("Độc Giả không tồn tại");
+                   }
+                   else
                     {
-                        MessageBox.Show("Xóa độc giả không thành công");
+                        MessageBox.Show("Xóa độc giả thành công");
                     }
                 }
 
@@ -132,5 +139,12 @@ namespace QuanLyThuVien.Form_DocGia
             }
           
         }
+
+        private void lamMoi(object sender, EventArgs e)
+        {
+            HienThiDocGia(null);
+        }
+
+        
     }
 }

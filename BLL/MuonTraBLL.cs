@@ -30,5 +30,9 @@ namespace BLL
         {
             return MTAC.TimKiemMuonTra(strthongtin);
         }
+        public List<DocGiaViPham> HienThiListSachDangMuonQuaHan()
+        {
+            return MTAC.HienThiListSachDangMuonQuaHan();
+        }
     }
 }

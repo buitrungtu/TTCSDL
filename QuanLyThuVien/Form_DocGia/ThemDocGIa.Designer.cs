@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLuuTTDocGia = new System.Windows.Forms.Button();
-            this.txtBoxQuequan = new System.Windows.Forms.TextBox();
-            this.txtBoxSdt = new System.Windows.Forms.TextBox();
-            this.txtBoxNgaySinh = new System.Windows.Forms.TextBox();
-            this.txtBoxDonVi = new System.Windows.Forms.TextBox();
-            this.txtBoxSuaTenDocGia = new System.Windows.Forms.TextBox();
+            this.btnAddTTDocGia = new System.Windows.Forms.Button();
+            this.txtBoxThemQuequan = new System.Windows.Forms.TextBox();
+            this.txtBoxThemSdt = new System.Windows.Forms.TextBox();
+            this.txtBoxThemDonVi = new System.Windows.Forms.TextBox();
+            this.txtBoxThemTenDocGia = new System.Windows.Forms.TextBox();
             this.lbSuaMaDocGia = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,7 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxMaDocGia = new System.Windows.Forms.TextBox();
+            this.dateTimeNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -55,51 +55,46 @@
             this.btnHuy.TabIndex = 29;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // btnLuuTTDocGia
+            // btnAddTTDocGia
             // 
-            this.btnLuuTTDocGia.ForeColor = System.Drawing.Color.Black;
-            this.btnLuuTTDocGia.Location = new System.Drawing.Point(241, 405);
-            this.btnLuuTTDocGia.Name = "btnLuuTTDocGia";
-            this.btnLuuTTDocGia.Size = new System.Drawing.Size(160, 23);
-            this.btnLuuTTDocGia.TabIndex = 28;
-            this.btnLuuTTDocGia.Text = "Lưu Thông tin";
-            this.btnLuuTTDocGia.UseVisualStyleBackColor = true;
+            this.btnAddTTDocGia.ForeColor = System.Drawing.Color.Black;
+            this.btnAddTTDocGia.Location = new System.Drawing.Point(241, 405);
+            this.btnAddTTDocGia.Name = "btnAddTTDocGia";
+            this.btnAddTTDocGia.Size = new System.Drawing.Size(160, 23);
+            this.btnAddTTDocGia.TabIndex = 28;
+            this.btnAddTTDocGia.Text = "Lưu Thông tin";
+            this.btnAddTTDocGia.UseVisualStyleBackColor = true;
+            this.btnAddTTDocGia.Click += new System.EventHandler(this.saveDocGiaDB);
             // 
-            // txtBoxQuequan
+            // txtBoxThemQuequan
             // 
-            this.txtBoxQuequan.Location = new System.Drawing.Point(379, 358);
-            this.txtBoxQuequan.Name = "txtBoxQuequan";
-            this.txtBoxQuequan.Size = new System.Drawing.Size(220, 20);
-            this.txtBoxQuequan.TabIndex = 27;
+            this.txtBoxThemQuequan.Location = new System.Drawing.Point(379, 358);
+            this.txtBoxThemQuequan.Name = "txtBoxThemQuequan";
+            this.txtBoxThemQuequan.Size = new System.Drawing.Size(220, 20);
+            this.txtBoxThemQuequan.TabIndex = 27;
             // 
-            // txtBoxSdt
+            // txtBoxThemSdt
             // 
-            this.txtBoxSdt.Location = new System.Drawing.Point(379, 314);
-            this.txtBoxSdt.Name = "txtBoxSdt";
-            this.txtBoxSdt.Size = new System.Drawing.Size(220, 20);
-            this.txtBoxSdt.TabIndex = 26;
+            this.txtBoxThemSdt.Location = new System.Drawing.Point(379, 314);
+            this.txtBoxThemSdt.Name = "txtBoxThemSdt";
+            this.txtBoxThemSdt.Size = new System.Drawing.Size(220, 20);
+            this.txtBoxThemSdt.TabIndex = 26;
             // 
-            // txtBoxNgaySinh
+            // txtBoxThemDonVi
             // 
-            this.txtBoxNgaySinh.Location = new System.Drawing.Point(379, 259);
-            this.txtBoxNgaySinh.Name = "txtBoxNgaySinh";
-            this.txtBoxNgaySinh.Size = new System.Drawing.Size(220, 20);
-            this.txtBoxNgaySinh.TabIndex = 25;
+            this.txtBoxThemDonVi.Location = new System.Drawing.Point(379, 202);
+            this.txtBoxThemDonVi.Name = "txtBoxThemDonVi";
+            this.txtBoxThemDonVi.Size = new System.Drawing.Size(220, 20);
+            this.txtBoxThemDonVi.TabIndex = 24;
             // 
-            // txtBoxDonVi
+            // txtBoxThemTenDocGia
             // 
-            this.txtBoxDonVi.Location = new System.Drawing.Point(379, 202);
-            this.txtBoxDonVi.Name = "txtBoxDonVi";
-            this.txtBoxDonVi.Size = new System.Drawing.Size(220, 20);
-            this.txtBoxDonVi.TabIndex = 24;
-            // 
-            // txtBoxSuaTenDocGia
-            // 
-            this.txtBoxSuaTenDocGia.Location = new System.Drawing.Point(379, 142);
-            this.txtBoxSuaTenDocGia.Name = "txtBoxSuaTenDocGia";
-            this.txtBoxSuaTenDocGia.Size = new System.Drawing.Size(220, 20);
-            this.txtBoxSuaTenDocGia.TabIndex = 23;
+            this.txtBoxThemTenDocGia.Location = new System.Drawing.Point(379, 142);
+            this.txtBoxThemTenDocGia.Name = "txtBoxThemTenDocGia";
+            this.txtBoxThemTenDocGia.Size = new System.Drawing.Size(220, 20);
+            this.txtBoxThemTenDocGia.TabIndex = 23;
             // 
             // lbSuaMaDocGia
             // 
@@ -188,12 +183,19 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Thêm độc giả";
             // 
-            // textBox1
+            // txtBoxMaDocGia
             // 
-            this.textBox1.Location = new System.Drawing.Point(379, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 20);
-            this.textBox1.TabIndex = 30;
+            this.txtBoxMaDocGia.Location = new System.Drawing.Point(379, 88);
+            this.txtBoxMaDocGia.Name = "txtBoxMaDocGia";
+            this.txtBoxMaDocGia.Size = new System.Drawing.Size(220, 20);
+            this.txtBoxMaDocGia.TabIndex = 30;
+            // 
+            // dateTimeNgaySinh
+            // 
+            this.dateTimeNgaySinh.Location = new System.Drawing.Point(379, 253);
+            this.dateTimeNgaySinh.Name = "dateTimeNgaySinh";
+            this.dateTimeNgaySinh.Size = new System.Drawing.Size(220, 20);
+            this.dateTimeNgaySinh.TabIndex = 31;
             // 
             // ThemDocGIa
             // 
@@ -201,14 +203,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(63)))), ((int)(((byte)(112)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimeNgaySinh);
+            this.Controls.Add(this.txtBoxMaDocGia);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnLuuTTDocGia);
-            this.Controls.Add(this.txtBoxQuequan);
-            this.Controls.Add(this.txtBoxSdt);
-            this.Controls.Add(this.txtBoxNgaySinh);
-            this.Controls.Add(this.txtBoxDonVi);
-            this.Controls.Add(this.txtBoxSuaTenDocGia);
+            this.Controls.Add(this.btnAddTTDocGia);
+            this.Controls.Add(this.txtBoxThemQuequan);
+            this.Controls.Add(this.txtBoxThemSdt);
+            this.Controls.Add(this.txtBoxThemDonVi);
+            this.Controls.Add(this.txtBoxThemTenDocGia);
             this.Controls.Add(this.lbSuaMaDocGia);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -227,12 +229,11 @@
         #endregion
 
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button btnLuuTTDocGia;
-        private System.Windows.Forms.TextBox txtBoxQuequan;
-        private System.Windows.Forms.TextBox txtBoxSdt;
-        private System.Windows.Forms.TextBox txtBoxNgaySinh;
-        private System.Windows.Forms.TextBox txtBoxDonVi;
-        private System.Windows.Forms.TextBox txtBoxSuaTenDocGia;
+        private System.Windows.Forms.Button btnAddTTDocGia;
+        private System.Windows.Forms.TextBox txtBoxThemQuequan;
+        private System.Windows.Forms.TextBox txtBoxThemSdt;
+        private System.Windows.Forms.TextBox txtBoxThemDonVi;
+        private System.Windows.Forms.TextBox txtBoxThemTenDocGia;
         private System.Windows.Forms.Label lbSuaMaDocGia;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -241,6 +242,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxMaDocGia;
+        private System.Windows.Forms.DateTimePicker dateTimeNgaySinh;
     }
 }

@@ -45,7 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lbNgayHienTai = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txbNgayTra = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button3
@@ -221,18 +221,19 @@
             this.label8.TabIndex = 67;
             this.label8.Text = "Ngày hẹn trả:";
             // 
-            // txbNgayTra
+            // dateTimePicker1
             // 
-            this.txbNgayTra.Location = new System.Drawing.Point(172, 293);
-            this.txbNgayTra.Name = "txbNgayTra";
-            this.txbNgayTra.Size = new System.Drawing.Size(365, 31);
-            this.txbNgayTra.TabIndex = 54;
+            this.dateTimePicker1.Location = new System.Drawing.Point(172, 290);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(365, 31);
+            this.dateTimePicker1.TabIndex = 74;
             // 
             // Form_MuonSach
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(63)))), ((int)(((byte)(112)))));
             this.ClientSize = new System.Drawing.Size(586, 454);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -244,7 +245,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbMaSach);
-            this.Controls.Add(this.txbNgayTra);
             this.Controls.Add(this.txbMaNguoiMuon);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
@@ -281,6 +281,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbNgayHienTai;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txbNgayTra;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

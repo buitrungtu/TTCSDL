@@ -68,7 +68,7 @@ namespace QuanLyThuVien.Form_DocGia
             {
                 ListViewItem lvi = listViewSachDangMuon.SelectedItems[0];
                 SachDangMuon sachDangMuon = lvi.Tag as SachDangMuon;
-                if (docGiaBLL.TraSach(sachDangMuon.maMuonTra) )
+                if (docGiaBLL.TraSach(sachDangMuon.maSach) )
                 {
                     //Huynh load lại sach da tra 
                     LoadThongTinChiTietDocGia();

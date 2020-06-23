@@ -20,6 +20,7 @@ namespace DAL
             command.CommandText = "select * from HienThiGiaoDienSach";
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
+           
             while (reader.Read())
             {
                 Sach temp = new Sach();

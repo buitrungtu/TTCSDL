@@ -265,17 +265,18 @@ namespace DAL
             reader.Close();
             return sachDangMuons;
         }
-        public bool TraSach (int maMuonTra)
+        public bool TraSach (string maSach)
         {
             OpenConnection();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "EXEC trasach @maMuonTra, @ngayTra ";
+            command.CommandText = "EXEC trasach @maSach, @ngayTra ";
             command.Connection = conn;
-            command.Parameters.Add("@maMuonTra", SqlDbType.Int).Value = maMuonTra;
+            command.Parameters.Add("@maSach", SqlDbType.NChar).Value = maSach;
             command.Parameters.Add("@ngayTra", SqlDbType.DateTime).Value = DateTime.Now;
 
             int kq = command.ExecuteNonQuery();
+
             return kq > 0;
         }
         public bool SuaThongTinDocGia(DocGia suaDocGia)
@@ -296,7 +297,7 @@ namespace DAL
             int kq = command.ExecuteNonQuery();
             return kq > 0;
         }
-        public bool XoaDocGia(DocGia docGia)
+        public int XoaDocGia(DocGia docGia)
         {
             OpenConnection();
             SqlCommand command = new SqlCommand();
@@ -305,8 +306,38 @@ namespace DAL
             command.Connection = conn;
             command.Parameters.Add("@maDocGia", SqlDbType.Int).Value = docGia.maDocGia;
 
+            return command.ExecuteNonQuery();
+           
+        }
+        public bool ThemDocGia(DocGia docGia)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "EXEC themDocGia @maDocGia, @tenDocGia, @donVi, @ngaySinh, @sdt, @queQuan";
+            command.Connection = conn;
+            command.Parameters.Add("@maDocGia", SqlDbType.Int).Value = docGia.maDocGia;
+            command.Parameters.Add("@tenDocGia", SqlDbType.NVarChar).Value = docGia.tenDocGia;
+            command.Parameters.Add("@donVi", SqlDbType.NVarChar).Value = docGia.donVi;
+            command.Parameters.Add("@ngaySinh", SqlDbType.DateTime).Value = docGia.ngaySinh;
+            command.Parameters.Add("@sdt", SqlDbType.Int).Value = docGia.sdt;
+            command.Parameters.Add("@queQuan", SqlDbType.NVarChar).Value = docGia.queQuan;
             int kq = command.ExecuteNonQuery();
             return kq > 0;
+        }
+        public bool KiemTraXemSachCoTonTaikhong(string maSach)
+        {
+            OpenConnection();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "EXEC trasach @maSach, @ngayTra ";
+            command.Connection = conn;
+            command.Parameters.Add("@maSach", SqlDbType.NChar).Value = maSach;
+            command.Parameters.Add("@ngayTra", SqlDbType.DateTime).Value = DateTime.Now;
+
+            int kq = command.ExecuteNonQuery();
+
+            return kq == -1;
         }
     }
 }
