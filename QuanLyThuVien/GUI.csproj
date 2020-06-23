@@ -92,7 +92,34 @@
     <Compile Include="Form_DocGia\ThongTinChiTietDocGiacs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_DocGia\ThongTinChiTietDocGiacs.Designer.cs">
+
+
+<Compile Include="Form_NhanVien\FormThemNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NhanVien\FormThemNV.Designer.cs">
+      <DependentUpon>FormThemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NhanVien\QuanLy_NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_NhanVien\QuanLy_NhanVien.Designer.cs">
+      <DependentUpon>QuanLy_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NhanVien\SuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NhanVien\SuaNhanVien.Designer.cs">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NhanVien\ThongKeNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NhanVien\ThongKeNV.Designer.cs">
+      <DependentUpon>ThongKeNV.cs</DependentUpon>
+    </Compile>    
+
+<Compile Include="Form_DocGia\ThongTinChiTietDocGiacs.Designer.cs">
       <DependentUpon>ThongTinChiTietDocGiacs.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_MuonTra\Form_ChiTietMuonTra.cs">
@@ -195,6 +222,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_MuonTra\QuanLi_MuonTra.resx">
       <DependentUpon>QuanLi_MuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NhanVien\FormThemNV.resx">
+      <DependentUpon>FormThemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NhanVien\QuanLy_NhanVien.resx">
+      <DependentUpon>QuanLy_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NhanVien\SuaNhanVien.resx">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NhanVien\ThongKeNV.resx">
+      <DependentUpon>ThongKeNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Sach\QuanLi_Sach.resx">
       <DependentUpon>QuanLi_Sach.cs</DependentUpon>

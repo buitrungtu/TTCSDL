@@ -54,6 +54,7 @@
     <Compile Include="DauSachAccess.cs" />
     <Compile Include="MuonTraAccess.cs" />
     <Compile Include="DocGiaAccess.cs" />
+    <Compile Include="NhanVienAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachAccess.cs" />
     <Compile Include="SachTheoTheLoai.cs" />

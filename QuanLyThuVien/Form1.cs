@@ -2,6 +2,7 @@
 using QuanLyThuVien.Form_MuonTra;
 using QuanLyThuVien.Form_Sach;
 using QuanLyThuVien.Form_ThongKe;
+using QuanLyThuVien.Form_NhanVien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace QuanLyThuVien
         private QuanLi_MuonTra quanLiMuonTra;
         private QuanLyDocGia quanLyDocGia;
         private fThongKe thongKe;
+	private QuanLy_NhanVien quanLiNhanVien;
 
         public Form1()
         {
@@ -35,6 +37,7 @@ namespace QuanLyThuVien
             quanLiMuonTra = new QuanLi_MuonTra();
             quanLyDocGia = new QuanLyDocGia();
             thongKe = new fThongKe();
+	    quanLiNhanVien = new QuanLy_NhanVien();
             AddControlsToPanel(quanLiSach);
         }
 
@@ -111,6 +114,7 @@ namespace QuanLyThuVien
         private void btnNhanVien_Click_1(object sender, EventArgs e)
         {
             moveSidePanel(btnNhanVien);
+            AddControlsToPanel(quanLiNhanVien);
         }
 
         private void btnThongKe_Click_1(object sender, EventArgs e)
