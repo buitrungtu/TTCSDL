@@ -140,13 +140,8 @@
             this.listViewDocGia.HideSelection = false;
             this.listViewDocGia.Location = new System.Drawing.Point(0, 0);
             this.listViewDocGia.Name = "listViewDocGia";
-<<<<<<< HEAD
             this.listViewDocGia.Size = new System.Drawing.Size(800, 450);
             this.listViewDocGia.TabIndex = 28;
-=======
-            this.listViewDocGia.Size = new System.Drawing.Size(794, 388);
-            this.listViewDocGia.TabIndex = 31;
->>>>>>> 38a50ff453dd60729a81c510aa0f26bdf5225f8e
             this.listViewDocGia.UseCompatibleStateImageBehavior = false;
             this.listViewDocGia.View = System.Windows.Forms.View.Details;
             // 
@@ -219,13 +214,6 @@
             this.Name = "QuanLyDocGia";
             this.Size = new System.Drawing.Size(800, 450);
             this.Load += new System.EventHandler(this.QuanLyDocGiaLoad);
-<<<<<<< HEAD
-=======
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.contextMenuStripItemDocGia.ResumeLayout(false);
->>>>>>> 38a50ff453dd60729a81c510aa0f26bdf5225f8e
             this.ResumeLayout(false);
 
         }

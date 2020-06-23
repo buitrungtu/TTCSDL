@@ -68,13 +68,15 @@
     <Compile Include="Form_DocGia\QuanLyDocGia.Designer.cs">
       <DependentUpon>QuanLyDocGia.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Form_Login\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Login\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
-=======
+
+
+
+    </Compile>
     <Compile Include="Form_DocGia\SuaThongTinDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,7 +94,6 @@
     </Compile>
     <Compile Include="Form_DocGia\ThongTinChiTietDocGiacs.Designer.cs">
       <DependentUpon>ThongTinChiTietDocGiacs.cs</DependentUpon>
->>>>>>> 38a50ff453dd60729a81c510aa0f26bdf5225f8e
     </Compile>
     <Compile Include="Form_MuonTra\Form_ChiTietMuonTra.cs">
       <SubType>Form</SubType>
@@ -168,11 +169,12 @@
     <EmbeddedResource Include="Form_DocGia\QuanLyDocGia.resx">
       <DependentUpon>QuanLyDocGia.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
+
     <EmbeddedResource Include="Form_Login\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Form_DocGia\SuaThongTinDocGia.resx">
+
+	</EmbeddedResource>    
+<EmbeddedResource Include="Form_DocGia\SuaThongTinDocGia.resx">
       <DependentUpon>SuaThongTinDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DocGia\ThemDocGIa.resx">
@@ -180,7 +182,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DocGia\ThongTinChiTietDocGiacs.resx">
       <DependentUpon>ThongTinChiTietDocGiacs.cs</DependentUpon>
->>>>>>> 38a50ff453dd60729a81c510aa0f26bdf5225f8e
+
     </EmbeddedResource>
     <EmbeddedResource Include="Form_MuonTra\Form_ChiTietMuonTra.resx">
       <DependentUpon>Form_ChiTietMuonTra.cs</DependentUpon>

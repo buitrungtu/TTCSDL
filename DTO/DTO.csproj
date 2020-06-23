@@ -50,11 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="DauSachDuocMuonNhieu.cs" />
-=======
     <Compile Include="DocGia\SachDangMuon.cs" />
->>>>>>> 38a50ff453dd60729a81c510aa0f26bdf5225f8e
     <Compile Include="MuonTra\ChiTietMuonTra.cs" />
     <Compile Include="MuonTra\DocGiaViPham.cs" />
     <Compile Include="MuonTra\MuonSach.cs" />
