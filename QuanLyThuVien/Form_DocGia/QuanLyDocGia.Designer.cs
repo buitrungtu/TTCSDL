@@ -190,6 +190,10 @@
             this.thôngTinChiTiếtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.thôngTinChiTiếtToolStripMenuItem.Text = "Thông tin chi tiết";
             this.thôngTinChiTiếtToolStripMenuItem.Click += new System.EventHandler(this.clickItemThongTinChiTietDocGia);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.contextMenuStripItemDocGia.ResumeLayout(false);
             // 
             // xóaĐộcGiảToolStripMenuItem
             // 

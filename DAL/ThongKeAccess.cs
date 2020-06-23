@@ -15,22 +15,22 @@ namespace DAL
         {
             List<DauSachDuocMuonNhieu> list = new List<DauSachDuocMuonNhieu>();
             OpenConnection();
-            SqlCommand command = new SqlCommand();
-            command.CommandType = CommandType.Text;
-            command.CommandText = "exec P_DauSachMuonNhieu";
-            command.Connection = conn;
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                DauSachDuocMuonNhieu x = new DauSachDuocMuonNhieu();
-                x.TenDauSach = reader.GetString(0);
-                x.Tap = reader.GetInt32(1);
-                x.SoLuotMuon = reader.GetInt32(2);
+            //SqlCommand command = new SqlCommand();
+            //command.CommandType = CommandType.Text;
+            //command.CommandText = "exec P_DauSachMuonNhieu";
+            //command.Connection = conn;
+            //SqlDataReader reader = command.ExecuteReader();
+            //while (reader.Read())
+            //{
+            //    DauSachDuocMuonNhieu x = new DauSachDuocMuonNhieu();
+            //    x.TenDauSach = reader.GetString(0);
+            //    x.Tap = reader.GetInt32(1);
+            //    x.SoLuotMuon = reader.GetInt32(2);
 
-                list.Add(x);
+            //    list.Add(x);
 
-            }
-            reader.Close();
+            //}
+            //reader.Close();
             return list;
         }
         public List<DauSachDuocMuonNhieu> SachConLai() 

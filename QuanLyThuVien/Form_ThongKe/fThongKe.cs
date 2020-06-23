@@ -23,10 +23,10 @@ namespace QuanLyThuVien.Form_ThongKe
         public fThongKe()
         {
             InitializeComponent();
-            DauSachMuonNhieu();
-            LoadListTheLoai();
-            SachConLai();
-            TheLoaiYeuThich();
+            //DauSachMuonNhieu();
+            //LoadListTheLoai();
+            //SachConLai();
+            //TheLoaiYeuThich();
         }
         public void LoadListTheLoai()
         {
