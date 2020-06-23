@@ -41,6 +41,7 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -67,6 +68,12 @@
     <Compile Include="Sach\ThongTinSach.cs" />
     <Compile Include="TheLoaiYeuThich.cs" />
     <Compile Include="TheLoai\TheLoai.cs" />
+    <Compile Include="NhanVien\ChucVu.cs" />
+    <Compile Include="NhanVien\NhanVien.cs" />
+    <Compile Include="NhanVien\TaiKhoan.cs" />
+    <Compile Include="NhanVien\ThemNhanVien.cs" />
+    <Compile Include="NhanVien\ThongKeHoatDongNhanVien.cs" />
+    <Compile Include="NhanVien\ThongKeTheoChucVu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

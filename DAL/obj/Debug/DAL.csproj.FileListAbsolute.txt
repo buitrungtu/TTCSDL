@@ -9,3 +9,15 @@ C:\Desktop\CloneAppQLTV\TTCSDL\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 C:\Desktop\CloneAppQLTV\TTCSDL\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Desktop\CloneAppQLTV\TTCSDL\DAL\obj\Debug\DAL.dll
 C:\Desktop\CloneAppQLTV\TTCSDL\DAL\obj\Debug\DAL.pdb
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\obj\Debug\DAL.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\obj\Debug\DAL.pdb
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\bin\Debug\DAL.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\bin\Debug\DAL.pdb
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\bin\Debug\DTO.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\bin\Debug\MetroFramework.Design.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\bin\Debug\MetroFramework.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\bin\Debug\MetroFramework.Fonts.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\bin\Debug\DTO.pdb
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DAL\obj\Debug\DAL.csproj.CopyComplete

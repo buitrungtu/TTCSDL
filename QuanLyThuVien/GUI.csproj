@@ -43,6 +43,7 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
@@ -73,9 +74,6 @@
     </Compile>
     <Compile Include="Form_Login\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
-
-
-
     </Compile>
     <Compile Include="Form_DocGia\SuaThongTinDocGia.cs">
       <SubType>Form</SubType>
@@ -92,9 +90,7 @@
     <Compile Include="Form_DocGia\ThongTinChiTietDocGiacs.cs">
       <SubType>Form</SubType>
     </Compile>
-
-
-<Compile Include="Form_NhanVien\FormThemNV.cs">
+    <Compile Include="Form_NhanVien\FormThemNV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_NhanVien\FormThemNV.Designer.cs">
@@ -117,9 +113,8 @@
     </Compile>
     <Compile Include="Form_NhanVien\ThongKeNV.Designer.cs">
       <DependentUpon>ThongKeNV.cs</DependentUpon>
-    </Compile>    
-
-<Compile Include="Form_DocGia\ThongTinChiTietDocGiacs.Designer.cs">
+    </Compile>
+    <Compile Include="Form_DocGia\ThongTinChiTietDocGiacs.Designer.cs">
       <DependentUpon>ThongTinChiTietDocGiacs.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_MuonTra\Form_ChiTietMuonTra.cs">
@@ -196,12 +191,10 @@
     <EmbeddedResource Include="Form_DocGia\QuanLyDocGia.resx">
       <DependentUpon>QuanLyDocGia.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Form_Login\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
-
-	</EmbeddedResource>    
-<EmbeddedResource Include="Form_DocGia\SuaThongTinDocGia.resx">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DocGia\SuaThongTinDocGia.resx">
       <DependentUpon>SuaThongTinDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DocGia\ThemDocGIa.resx">
@@ -209,7 +202,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DocGia\ThongTinChiTietDocGiacs.resx">
       <DependentUpon>ThongTinChiTietDocGiacs.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Form_MuonTra\Form_ChiTietMuonTra.resx">
       <DependentUpon>Form_ChiTietMuonTra.cs</DependentUpon>
@@ -279,9 +271,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Form_NhanVien\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{892ab292-f53b-40be-9a20-cc653ce89a4f}</Project>

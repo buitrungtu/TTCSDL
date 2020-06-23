@@ -7,3 +7,12 @@ C:\Desktop\CloneAppQLTV\TTCSDL\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 C:\Desktop\CloneAppQLTV\TTCSDL\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Desktop\CloneAppQLTV\TTCSDL\DTO\obj\Debug\DTO.dll
 C:\Desktop\CloneAppQLTV\TTCSDL\DTO\obj\Debug\DTO.pdb
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DTO\bin\Debug\DTO.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DTO\bin\Debug\DTO.pdb
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DTO\bin\Debug\MetroFramework.Design.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DTO\bin\Debug\MetroFramework.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DTO\bin\Debug\MetroFramework.Fonts.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DTO\obj\Debug\DTO.dll
+D:\Hoc Tap\Dai Hoc\k2NamBa\TTCSDL\PMFinalTTCSDL\TTCSDL\DTO\obj\Debug\DTO.pdb
