@@ -279,6 +279,7 @@ namespace DAL
 
             return kq > 0;
         }
+        // sua thong tin doc gia
         public bool SuaThongTinDocGia(DocGia suaDocGia)
         {
             OpenConnection();

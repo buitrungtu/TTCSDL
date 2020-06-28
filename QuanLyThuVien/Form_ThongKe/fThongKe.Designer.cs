@@ -317,7 +317,7 @@
             this.panel4.Controls.Add(this.lvTheLoai);
             this.panel4.Location = new System.Drawing.Point(17, 14);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(738, 458);
+            this.panel4.Size = new System.Drawing.Size(781, 479);
             this.panel4.TabIndex = 2;
             // 
             // lvTheLoai
@@ -335,8 +335,8 @@
             this.lvTheLoai.HideSelection = false;
             this.lvTheLoai.Location = new System.Drawing.Point(0, 0);
             this.lvTheLoai.Name = "lvTheLoai";
-            this.lvTheLoai.Size = new System.Drawing.Size(738, 458);
-            this.lvTheLoai.TabIndex = 41;
+            this.lvTheLoai.Size = new System.Drawing.Size(781, 479);
+            this.lvTheLoai.TabIndex = 42;
             this.lvTheLoai.UseCompatibleStateImageBehavior = false;
             this.lvTheLoai.View = System.Windows.Forms.View.Details;
             // 
@@ -348,7 +348,7 @@
             // columnHeader15
             // 
             this.columnHeader15.Text = "Tên thể loại";
-            this.columnHeader15.Width = 461;
+            this.columnHeader15.Width = 430;
             // 
             // columnHeader16
             // 
